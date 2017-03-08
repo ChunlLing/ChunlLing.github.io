@@ -15,7 +15,7 @@
 <meta property="og:description" content="参考：    http://www.jianshu.com/p/380290deb8f0        http://div.io/topic/1691        http://moxfive.coding.me/yelee/3.Style-Customisation/background.html
 前期准备：1 安装git2 安装node.js3 安装hexo4 申请GitHub账号
 搭建步">
-<meta property="og:updated_time" content="2017-03-08T06:54:29.007Z">
+<meta property="og:updated_time" content="2017-03-08T08:37:20.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小白爱折腾之hexo+GitHub搭建个人博客">
 <meta name="twitter:description" content="参考：    http://www.jianshu.com/p/380290deb8f0        http://div.io/topic/1691        http://moxfive.coding.me/yelee/3.Style-Customisation/background.html
@@ -99,13 +99,16 @@
 <p>3 在“用户名.github,io”根目录输入命令（cmd或git）：hexo s，在浏览器输入localhost:4000</p>
 <p>至此，初级搭建成功。</p>
 <p>进阶-写博客：</p>
-<p>创建新文章： hexo new “文章标题”</p>
+<p>创建新文章： hexo new “文章标题” （存在source_posts目录中）</p>
+<p>创建草稿： hexo new draft “文章标题” （会在source文件夹中新建一个文件夹“_drafts”）<br>发布草稿： hexo publish “文章标题” （会将存在source_drafts的草稿发布到”_posts”文件夹中）</p>
+<p>本地预览： hexo s或hexo server</p>
 <p>进阶-更换主题：</p>
+<p>遇到的问题：<br>1 使用hexo d之后直接输入<a href="https://用户名.github.io显示404" target="_blank" rel="external">https://用户名.github.io显示404</a><br>答： 没有配置deploy的type和repo<br>2 更改以前的文章内容，使用hexo clean、hexo g、hexo d没有用，而且localhost:4000也一样<br>答： 因为修改的文件不是_post里面的文件…(╯‵□′)╯︵┻━┻z<br>反思： 要细心阿！！！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ChunlLing.github.io.com/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/" data-id="cj00ok66k00015su7icanz1ry" class="article-share-link">Partager</a>
+      <a data-url="http://ChunlLing.github.io.com/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/" data-id="cj00q8t890002bcu7euiyau1f" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
