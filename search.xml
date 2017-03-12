@@ -205,6 +205,10 @@
 </li>
 <li><p>关于markdown的有序列表一点小问题。编辑的时候应该为子项内容缩进一格，否则如果当子项内容长时该子项后面的子项序号会重新从1开始。</p>
 </li>
+<li><p>markdown表格？似乎没有被渲染成表格。</p>
+ <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">|<span class="string"> column </span>|<span class="string"> column </span>|</div><div class="line">|<span class="string">--------</span>|<span class="string">--------</span>|</div><div class="line">|<span class="string">        </span>|<span class="string">        </span>|</div></pre></td></tr></table></figure>
+<p> 因为被浏览器（Chrome）检测为不安全脚本了</p>
+</li>
 </ol>
 ]]></content>
       
