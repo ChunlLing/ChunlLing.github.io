@@ -10,72 +10,10 @@
 <p>标识符命名规则：</p>
 <ul>
 <li>第一个字符必须是一个字母、下划线<code>_</code>或一个美元符号<code>$</code></li>
-<li>其他字符可以是字母、下划线、美元符号或 ++数字++</li>
+<li>其他字符可以是字母、下划线、美元符号或数字</li>
 <li>不能把关键字、保留字、true、false和null作为标识符</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>break</th>
-<th>case</th>
-<th>catch</th>
-<th>continue</th>
-<th>default</th>
-<th>delete</th>
-<th>do</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>else</td>
-<td>finally</td>
-<td>for</td>
-<td>function</td>
-<td>if</td>
-<td>in</td>
-<td>instanceof</td>
-</tr>
-<tr>
-<td>——-</td>
-<td>———</td>
-<td>——–</td>
-<td>———-</td>
-<td>———</td>
-<td>——–</td>
-<td>————</td>
-</tr>
-<tr>
-<td>new</td>
-<td>return</td>
-<td>switch</td>
-<td>this</td>
-<td>throw</td>
-<td>try</td>
-<td>typeof</td>
-</tr>
-<tr>
-<td>——-</td>
-<td>———</td>
-<td>——–</td>
-<td>———-</td>
-<td>———</td>
-<td>——–</td>
-<td>————</td>
-</tr>
-<tr>
-<td>var</td>
-<td>void</td>
-<td>while</td>
-<td>with</td>
-</tr>
-<tr>
-<td>——-</td>
-<td>———</td>
-<td>——–</td>
-<td>———-</td>
-</tr>
-</tbody>
-</table>
+<p>| break |  case   |  catch | continue | default | delete |     do     |<br>|  else | finally |   for  | function |    if   |   in   | instanceof |<br>|  new  | return  | switch |   this   |  throw  |   try  |   typeof   |<br>|  var  |  void   |  while |   with   |</p>
 <p>注释：<code>//</code>单行注释 | <code>/* */</code>多行注释</p>
 <p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。<br>虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。<br>可选分号通用规则：如果当前语句和下一行语句无法合并解析，Javascrpt则在第一行后填补分号。<br>示例：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> a</div><div class="line">a</div><div class="line">=</div><div class="line"><span class="number">3</span></div><div class="line">console.log(a)</div></pre></td></tr></table></figure></p>
 <p>等价于<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a<span class="comment">;</span></div><div class="line"><span class="attribute">a</span> = <span class="number">3</span><span class="comment">;</span></div><div class="line">console.log(a)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
@@ -165,7 +103,7 @@
 <hr>
 <h1 id="进阶-写博客："><a href="#进阶-写博客：" class="headerlink" title="进阶-写博客："></a>进阶-写博客：</h1><p>创建新文章： <code>hexo new &quot;文章标题&quot;</code> （存在source_posts目录中）</p>
 <p>创建草稿： <code>hexo new draft &quot;文章标题&quot;</code> （会在source文件夹中新建一个文件夹“_drafts”）<br>发布草稿： <code>hexo publish &quot;文章标题&quot;</code> （会将存在source_drafts的草稿发布到”_posts”文件夹中）</p>
-<p>安装自动部署发布工具：<code>hexo-deployer-git</code><br>没安装的后果就是后面<code>hexo d</code>会出现 ++cannot found git++ 的错误</p>
+<p>安装自动部署发布工具：<code>hexo-deployer-git</code><br>没安装的后果就是后面<code>hexo d</code>会出现 “cannot found git” 的错误</p>
 <p>清除缓存：<code>hexo clean</code><br>生成静态文件：<code>hexo generate</code>或<code>hexo g</code><br>部署到git上：<code>hexo deploy</code>或<code>hexo d</code></p>
 <hr>
 <h1 id="进阶-更换主题："><a href="#进阶-更换主题：" class="headerlink" title="进阶-更换主题："></a>进阶-更换主题：</h1><p>到<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo</a>选择喜欢的主题。这里选了<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">Yelee</a>这个主题。<br><a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Yelee安装教程</a>。教程很详细，这里就不细述了b(￣▽￣)d</p>
@@ -218,7 +156,11 @@
 </li>
 <li><p>编辑输入时替换后一格内容【这个不在hexo配置范畴内】<br>答：按下<code>Insert</code>键试试？</p>
 </li>
-<li><p>关于markdown的有序列表一点小问题。编辑的时候应该为子项内容缩进一格，否则如果当子项内容长时该子项后面的子项序号会重新从1开始</p>
+<li><p>关于markdown的有序列表一点小问题。编辑的时候应该为子项内容缩进一格，否则如果当子项内容长时该子项后面的子项序号会重新从1开始。</p>
+</li>
+<li><p>markdown表格？</p>
+ <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">|<span class="string"> column </span>|<span class="string"> column </span>|</div><div class="line">|<span class="string">--------</span>|<span class="string">--------</span>|</div><div class="line">|<span class="string">        </span>|<span class="string">        </span>|</div></pre></td></tr></table></figure>
+<p> 在本地运行没有被正确渲染成表格</p>
 </li>
 </ol>
 ]]></content>

@@ -9,29 +9,10 @@
 标识符命名规则：
 
 第一个字符必须是一个字母、下划线_或一个美元符号$
-其他字符可以是字母、下划线、美元符号或 ++数字++
+其他字符可以是字母、下划线、美元符号或数字
 不能把关键字、保留字、true、false和null作为标识符
 
-
-
-
-break
-case
-catch
-continue
-default
-delete
-do
-
-
-
-
-else
-finally
-for
-function
-if
-in">
+| break |  case   |  catch | continue | default | delete |     do     ||  else | finally">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript基础笔记">
 <meta property="og:url" content="http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/index.html">
@@ -40,59 +21,21 @@ in">
 标识符命名规则：
 
 第一个字符必须是一个字母、下划线_或一个美元符号$
-其他字符可以是字母、下划线、美元符号或 ++数字++
+其他字符可以是字母、下划线、美元符号或数字
 不能把关键字、保留字、true、false和null作为标识符
 
-
-
-
-break
-case
-catch
-continue
-default
-delete
-do
-
-
-
-
-else
-finally
-for
-function
-if
-in">
-<meta property="og:updated_time" content="2017-03-12T02:56:12.313Z">
+| break |  case   |  catch | continue | default | delete |     do     ||  else | finally">
+<meta property="og:updated_time" content="2017-03-12T03:29:47.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript基础笔记">
 <meta name="twitter:description" content="基本语法Javascript区分大小写。
 标识符命名规则：
 
 第一个字符必须是一个字母、下划线_或一个美元符号$
-其他字符可以是字母、下划线、美元符号或 ++数字++
+其他字符可以是字母、下划线、美元符号或数字
 不能把关键字、保留字、true、false和null作为标识符
 
-
-
-
-break
-case
-catch
-continue
-default
-delete
-do
-
-
-
-
-else
-finally
-for
-function
-if
-in">
+| break |  case   |  catch | continue | default | delete |     do     ||  else | finally">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -331,72 +274,10 @@ in">
 <p>标识符命名规则：</p>
 <ul>
 <li>第一个字符必须是一个字母、下划线<code>_</code>或一个美元符号<code>$</code></li>
-<li>其他字符可以是字母、下划线、美元符号或 ++数字++</li>
+<li>其他字符可以是字母、下划线、美元符号或数字</li>
 <li>不能把关键字、保留字、true、false和null作为标识符</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>break</th>
-<th>case</th>
-<th>catch</th>
-<th>continue</th>
-<th>default</th>
-<th>delete</th>
-<th>do</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>else</td>
-<td>finally</td>
-<td>for</td>
-<td>function</td>
-<td>if</td>
-<td>in</td>
-<td>instanceof</td>
-</tr>
-<tr>
-<td>——-</td>
-<td>———</td>
-<td>——–</td>
-<td>———-</td>
-<td>———</td>
-<td>——–</td>
-<td>————</td>
-</tr>
-<tr>
-<td>new</td>
-<td>return</td>
-<td>switch</td>
-<td>this</td>
-<td>throw</td>
-<td>try</td>
-<td>typeof</td>
-</tr>
-<tr>
-<td>——-</td>
-<td>———</td>
-<td>——–</td>
-<td>———-</td>
-<td>———</td>
-<td>——–</td>
-<td>————</td>
-</tr>
-<tr>
-<td>var</td>
-<td>void</td>
-<td>while</td>
-<td>with</td>
-</tr>
-<tr>
-<td>——-</td>
-<td>———</td>
-<td>——–</td>
-<td>———-</td>
-</tr>
-</tbody>
-</table>
+<p>| break |  case   |  catch | continue | default | delete |     do     |<br>|  else | finally |   for  | function |    if   |   in   | instanceof |<br>|  new  | return  | switch |   this   |  throw  |   try  |   typeof   |<br>|  var  |  void   |  while |   with   |</p>
 <p>注释：<code>//</code>单行注释 | <code>/* */</code>多行注释</p>
 <p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。<br>虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。<br>可选分号通用规则：如果当前语句和下一行语句无法合并解析，Javascrpt则在第一行后填补分号。<br>示例：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> a</div><div class="line">a</div><div class="line">=</div><div class="line"><span class="number">3</span></div><div class="line">console.log(a)</div></pre></td></tr></table></figure></p>
 <p>等价于<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a<span class="comment">;</span></div><div class="line"><span class="attribute">a</span> = <span class="number">3</span><span class="comment">;</span></div><div class="line">console.log(a)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
@@ -435,7 +316,7 @@ in">
         <p><span>本文标题:</span><a href="/2017/03/12/Javascript基础笔记/">Javascript基础笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
         <p><span>发布时间:</span>2017年03月12日 - 01时04分</p>
-        <p><span>最后更新:</span>2017年03月12日 - 10时56分</p>
+        <p><span>最后更新:</span>2017年03月12日 - 11时29分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/12/Javascript基础笔记/" title="Javascript基础笔记">http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/</a>
             <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
