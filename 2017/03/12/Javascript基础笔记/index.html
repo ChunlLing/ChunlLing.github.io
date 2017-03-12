@@ -3,18 +3,96 @@
 <head>
   <meta charset="utf-8">
   
-  <title>about | (&gt;^ω^&lt;)喵</title>
+  <title>Javascript基础笔记 | (&gt;^ω^&lt;)喵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习总结 思考感悟 日常记录 知识管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://ChunlLing.github.io.com/about/index.html">
+  <meta name="description" content="基本语法Javascript区分大小写。
+标识符命名规则：
+
+第一个字符必须是一个字母、下划线_或一个美元符号$
+其他字符可以是字母、下划线、美元符号或 ++数字++
+不能把关键字、保留字、true、false和null作为标识符
+
+
+
+
+break
+case
+catch
+continue
+default
+delete
+do
+
+
+
+
+else
+finally
+for
+function
+if
+in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript基础笔记">
+<meta property="og:url" content="http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/index.html">
 <meta property="og:site_name" content="(>^ω^<)喵">
-<meta property="og:description" content="学习总结 思考感悟 日常记录 知识管理">
-<meta property="og:updated_time" content="2017-03-09T13:20:00.126Z">
+<meta property="og:description" content="基本语法Javascript区分大小写。
+标识符命名规则：
+
+第一个字符必须是一个字母、下划线_或一个美元符号$
+其他字符可以是字母、下划线、美元符号或 ++数字++
+不能把关键字、保留字、true、false和null作为标识符
+
+
+
+
+break
+case
+catch
+continue
+default
+delete
+do
+
+
+
+
+else
+finally
+for
+function
+if
+in">
+<meta property="og:updated_time" content="2017-03-12T02:56:12.313Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="学习总结 思考感悟 日常记录 知识管理">
+<meta name="twitter:title" content="Javascript基础笔记">
+<meta name="twitter:description" content="基本语法Javascript区分大小写。
+标识符命名规则：
+
+第一个字符必须是一个字母、下划线_或一个美元符号$
+其他字符可以是字母、下划线、美元符号或 ++数字++
+不能把关键字、保留字、true、false和null作为标识符
+
+
+
+
+break
+case
+catch
+continue
+default
+delete
+do
+
+
+
+
+else
+finally
+for
+function
+if
+in">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -38,7 +116,7 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -210,11 +288,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Javascript基础笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/about/index.html" class="article-date">
-      <time datetime="2017-03-09T13:19:59.000Z" itemprop="datePublished">2017-03-09</time>
+      <a href="/2017/03/12/Javascript基础笔记/" class="article-date">
+      <time datetime="2017-03-11T17:04:40.000Z" itemprop="datePublished">2017-03-12</time>
 </a>
     </div>
   
@@ -227,7 +305,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      Javascript基础笔记
     </h1>
   
 
@@ -237,6 +315,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -245,7 +327,103 @@
       
         
         
-          
+          <h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p>Javascript区分大小写。</p>
+<p>标识符命名规则：</p>
+<ul>
+<li>第一个字符必须是一个字母、下划线<code>_</code>或一个美元符号<code>$</code></li>
+<li>其他字符可以是字母、下划线、美元符号或 ++数字++</li>
+<li>不能把关键字、保留字、true、false和null作为标识符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>break</th>
+<th>case</th>
+<th>catch</th>
+<th>continue</th>
+<th>default</th>
+<th>delete</th>
+<th>do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>else</td>
+<td>finally</td>
+<td>for</td>
+<td>function</td>
+<td>if</td>
+<td>in</td>
+<td>instanceof</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>———</td>
+<td>——–</td>
+<td>———-</td>
+<td>———</td>
+<td>——–</td>
+<td>————</td>
+</tr>
+<tr>
+<td>new</td>
+<td>return</td>
+<td>switch</td>
+<td>this</td>
+<td>throw</td>
+<td>try</td>
+<td>typeof</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>———</td>
+<td>——–</td>
+<td>———-</td>
+<td>———</td>
+<td>——–</td>
+<td>————</td>
+</tr>
+<tr>
+<td>var</td>
+<td>void</td>
+<td>while</td>
+<td>with</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>———</td>
+<td>——–</td>
+<td>———-</td>
+</tr>
+</tbody>
+</table>
+<p>注释：<code>//</code>单行注释 | <code>/* */</code>多行注释</p>
+<p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。<br>虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。<br>可选分号通用规则：如果当前语句和下一行语句无法合并解析，Javascrpt则在第一行后填补分号。<br>示例：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> a</div><div class="line">a</div><div class="line">=</div><div class="line"><span class="number">3</span></div><div class="line">console.log(a)</div></pre></td></tr></table></figure></p>
+<p>等价于<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a<span class="comment">;</span></div><div class="line"><span class="attribute">a</span> = <span class="number">3</span><span class="comment">;</span></div><div class="line">console.log(a)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<p>两个例外：</p>
+<ol>
+<li><p>如果<code>return</code>、<code>break</code>和<code>continue</code>后紧跟着换行，则会在换行处填补分号。<br> 示例：</p>
+ <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span></div><div class="line"><span class="literal">true</span></div></pre></td></tr></table></figure>
+<p> 等价于</p>
+ <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span>;</div><div class="line"><span class="literal">true</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果将<code>++</code>或<code>--</code>用做后缀表达式，应当和表达式在同一行，否则行尾自动填补分号。<br> 示例：</p>
+ <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="section">x</span></div><div class="line">++</div><div class="line">y</div></pre></td></tr></table></figure>
+<p> 等价于</p>
+ <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x<span class="comment">;</span></div><div class="line">++y<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>赋值语句：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var x</span> = 0;</div></pre></td></tr></table></figure></p>
+<p>字符串也可以视为完整的语句<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello World!"</span></div></pre></td></tr></table></figure></p>
+<p>注意如果字符串不用<code>&#39;&#39;</code>或<code>&quot;&quot;</code>包裹会抛出<code>ReferenceError（引用错误）</code>。</p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><ul>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>NULL</li>
+<li></li>
+</ul>
+
         
       
     </div>
@@ -253,10 +431,67 @@
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/12/Javascript基础笔记/">Javascript基础笔记</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
+        <p><span>发布时间:</span>2017年03月12日 - 01时04分</p>
+        <p><span>最后更新:</span>2017年03月12日 - 10时56分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/12/Javascript基础笔记/" title="Javascript基础笔记">http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/11/停一下，再奔跑/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">停一下，再奔跑</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基本语法"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-number">2.</span> <span class="toc-text">数据类型</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
 
 
 
@@ -277,7 +512,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="about/index.html" data-title="about" data-url="http://ChunlLing.github.io.com/about/index.html"></div>
+    <div class="ds-thread" data-thread-key="2017/03/12/Javascript基础笔记/" data-title="Javascript基础笔记" data-url="http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -297,6 +532,37 @@
     
 
 
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/03/11/停一下，再奔跑/" title="下一篇: 停一下，再奔跑">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/Javascript基础笔记/">Javascript基础笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/停一下，再奔跑/">停一下，再奔跑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/">小白爱折腾之hexo+GitHub搭建个人博客</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
 
 

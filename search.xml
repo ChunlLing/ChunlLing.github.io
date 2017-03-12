@@ -4,6 +4,118 @@
   
     
     <entry>
+      <title><![CDATA[Javascript基础笔记]]></title>
+      <url>http://ChunlLing.github.io.com/2017/03/12/Javascript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p>Javascript区分大小写。</p>
+<p>标识符命名规则：</p>
+<ul>
+<li>第一个字符必须是一个字母、下划线<code>_</code>或一个美元符号<code>$</code></li>
+<li>其他字符可以是字母、下划线、美元符号或 ++数字++</li>
+<li>不能把关键字、保留字、true、false和null作为标识符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>break</th>
+<th>case</th>
+<th>catch</th>
+<th>continue</th>
+<th>default</th>
+<th>delete</th>
+<th>do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>else</td>
+<td>finally</td>
+<td>for</td>
+<td>function</td>
+<td>if</td>
+<td>in</td>
+<td>instanceof</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>———</td>
+<td>——–</td>
+<td>———-</td>
+<td>———</td>
+<td>——–</td>
+<td>————</td>
+</tr>
+<tr>
+<td>new</td>
+<td>return</td>
+<td>switch</td>
+<td>this</td>
+<td>throw</td>
+<td>try</td>
+<td>typeof</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>———</td>
+<td>——–</td>
+<td>———-</td>
+<td>———</td>
+<td>——–</td>
+<td>————</td>
+</tr>
+<tr>
+<td>var</td>
+<td>void</td>
+<td>while</td>
+<td>with</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>———</td>
+<td>——–</td>
+<td>———-</td>
+</tr>
+</tbody>
+</table>
+<p>注释：<code>//</code>单行注释 | <code>/* */</code>多行注释</p>
+<p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。<br>虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。<br>可选分号通用规则：如果当前语句和下一行语句无法合并解析，Javascrpt则在第一行后填补分号。<br>示例：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> a</div><div class="line">a</div><div class="line">=</div><div class="line"><span class="number">3</span></div><div class="line">console.log(a)</div></pre></td></tr></table></figure></p>
+<p>等价于<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a<span class="comment">;</span></div><div class="line"><span class="attribute">a</span> = <span class="number">3</span><span class="comment">;</span></div><div class="line">console.log(a)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<p>两个例外：</p>
+<ol>
+<li><p>如果<code>return</code>、<code>break</code>和<code>continue</code>后紧跟着换行，则会在换行处填补分号。<br> 示例：</p>
+ <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span></div><div class="line"><span class="literal">true</span></div></pre></td></tr></table></figure>
+<p> 等价于</p>
+ <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span>;</div><div class="line"><span class="literal">true</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果将<code>++</code>或<code>--</code>用做后缀表达式，应当和表达式在同一行，否则行尾自动填补分号。<br> 示例：</p>
+ <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="section">x</span></div><div class="line">++</div><div class="line">y</div></pre></td></tr></table></figure>
+<p> 等价于</p>
+ <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x<span class="comment">;</span></div><div class="line">++y<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>赋值语句：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var x</span> = 0;</div></pre></td></tr></table></figure></p>
+<p>字符串也可以视为完整的语句<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello World!"</span></div></pre></td></tr></table></figure></p>
+<p>注意如果字符串不用<code>&#39;&#39;</code>或<code>&quot;&quot;</code>包裹会抛出<code>ReferenceError（引用错误）</code>。</p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><ul>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>NULL</li>
+<li></li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> JS </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[停一下，再奔跑]]></title>
       <url>http://ChunlLing.github.io.com/2017/03/11/%E5%81%9C%E4%B8%80%E4%B8%8B%EF%BC%8C%E5%86%8D%E5%A5%94%E8%B7%91/</url>
       <content type="html"><![CDATA[<p>　　去掉修改论文和修复u盘以及其他杂务，差不多花了3天的时间折腾博客。虽然不快，从什么都不懂到看教程查文档大概能了解npm、git、hexo配置，在看到网页的效果一点一点的呈现出来的时候，还是小有成就感的，就像小时候课堂上完成作业被老师奖励小红花一样。<br>　　刚看到一句话</p>
