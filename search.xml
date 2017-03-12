@@ -13,7 +13,54 @@
 <li>其他字符可以是字母、下划线、美元符号或数字</li>
 <li>不能把关键字、保留字、true、false和null作为标识符</li>
 </ul>
-<p>| break |  case   |  catch | continue | default | delete |     do     |<br>|  else | finally |   for  | function |    if   |   in   | instanceof |<br>|  new  | return  | switch |   this   |  throw  |   try  |   typeof   |<br>|  var  |  void   |  while |   with   |</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>case</td>
+<td>catch</td>
+<td>continue</td>
+<td>default</td>
+<td>delete</td>
+<td>do</td>
+</tr>
+<tr>
+<td>else</td>
+<td>finally</td>
+<td>for</td>
+<td>function</td>
+<td>if</td>
+<td>in</td>
+<td>instanceof</td>
+</tr>
+<tr>
+<td>new</td>
+<td>return</td>
+<td>switch</td>
+<td>this</td>
+<td>throw</td>
+<td>try</td>
+<td>typeof</td>
+</tr>
+<tr>
+<td>var</td>
+<td>void</td>
+<td>while</td>
+<td>with</td>
+</tr>
+</tbody>
+</table>
 <p>注释：<code>//</code>单行注释 | <code>/* */</code>多行注释</p>
 <p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。<br>虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。<br>可选分号通用规则：如果当前语句和下一行语句无法合并解析，Javascrpt则在第一行后填补分号。<br>示例：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> a</div><div class="line">a</div><div class="line">=</div><div class="line"><span class="number">3</span></div><div class="line">console.log(a)</div></pre></td></tr></table></figure></p>
 <p>等价于<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a<span class="comment">;</span></div><div class="line"><span class="attribute">a</span> = <span class="number">3</span><span class="comment">;</span></div><div class="line">console.log(a)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
@@ -157,10 +204,6 @@
 <li><p>编辑输入时替换后一格内容【这个不在hexo配置范畴内】<br>答：按下<code>Insert</code>键试试？</p>
 </li>
 <li><p>关于markdown的有序列表一点小问题。编辑的时候应该为子项内容缩进一格，否则如果当子项内容长时该子项后面的子项序号会重新从1开始。</p>
-</li>
-<li><p>markdown表格？</p>
- <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">|<span class="string"> column </span>|<span class="string"> column </span>|</div><div class="line">|<span class="string">--------</span>|<span class="string">--------</span>|</div><div class="line">|<span class="string">        </span>|<span class="string">        </span>|</div></pre></td></tr></table></figure>
-<p> 在本地运行没有被正确渲染成表格</p>
 </li>
 </ol>
 ]]></content>
