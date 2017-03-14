@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017/3 | (&gt;^ω^&lt;)喵</title>
+  <title>git使用中遇到的错误 | (&gt;^ω^&lt;)喵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习总结 思考感悟 日常记录 知识管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="(>^ω^<)喵">
-<meta property="og:url" content="http://ChunlLing.github.io.com/archives/2017/03/index.html">
+  <meta name="description" content="用以记录在使用git时遇到的错误方便自查~
+
+使用git push或git push origin master（向远程仓库提交）时遇到错误：    12345678To https://github.com/XXXX/XXXX.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git使用中遇到的错误">
+<meta property="og:url" content="http://ChunlLing.github.io.com/2017/03/14/git使用中遇到的错误/index.html">
 <meta property="og:site_name" content="(>^ω^<)喵">
-<meta property="og:description" content="学习总结 思考感悟 日常记录 知识管理">
+<meta property="og:description" content="用以记录在使用git时遇到的错误方便自查~
+
+使用git push或git push origin master（向远程仓库提交）时遇到错误：    12345678To https://github.com/XXXX/XXXX.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some r">
+<meta property="og:updated_time" content="2017-03-14T11:14:13.157Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="(>^ω^<)喵">
-<meta name="twitter:description" content="学习总结 思考感悟 日常记录 知识管理">
+<meta name="twitter:title" content="git使用中遇到的错误">
+<meta name="twitter:description" content="用以记录在使用git时遇到的错误方便自查~
+
+使用git push或git push origin master（向远程仓库提交）时遇到错误：    12345678To https://github.com/XXXX/XXXX.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some r">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -37,8 +44,8 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
-          isArchive: true,
+          isPost: true,
+          isArchive: false,
           isTag: false,
           isCategory: false,
           open_in_new: false,
@@ -209,178 +216,196 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-git使用中遇到的错误" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/14/git使用中遇到的错误/" class="archive-article-date">
-      <time datetime="2017-03-14T10:41:18.000Z" itemprop="datePublished">03-14</time>
+    <div class="article-meta">
+      <a href="/2017/03/14/git使用中遇到的错误/" class="article-date">
+      <time datetime="2017-03-14T10:41:18.000Z" itemprop="datePublished">2017-03-14</time>
 </a>
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/git使用中遇到的错误/">git使用中遇到的错误</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git使用中遇到的错误
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+          <p>用以记录在使用git时遇到的错误方便自查~</p>
+<hr>
+<p>使用<code>git push</code>或<code>git push origin master</code>（向远程仓库提交）时遇到错误：<br>    <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">To <span class="keyword">https</span>://github.com/XXXX/XXXX.git</div><div class="line"> ! [rejected]        master -&gt; master (fetch <span class="keyword">first</span>)</div><div class="line">error: failed <span class="built_in">to</span> push some refs <span class="built_in">to</span> <span class="string">'https://github.com/XXXX/XXXX.git'</span></div><div class="line">hint: Updates were rejected because <span class="keyword">the</span> remote <span class="keyword">contains</span> work that you <span class="built_in">do</span></div><div class="line">hint: <span class="keyword">not</span> have locally. This is usually caused <span class="keyword">by</span> another repository pushing</div><div class="line">hint: <span class="built_in">to</span> <span class="keyword">the</span> same ref. You may want <span class="built_in">to</span> <span class="keyword">first</span> integrate <span class="keyword">the</span> remote changes</div><div class="line">hint: (e.g., <span class="string">'git pull ...'</span>) <span class="keyword">before</span> pushing again.</div><div class="line">hint: See <span class="keyword">the</span> <span class="string">'Note about fast-forwards'</span> <span class="keyword">in</span> <span class="string">'git push --help'</span> <span class="keyword">for</span> details.</div></pre></td></tr></table></figure></p>
+<p>原因：远程仓库中的master分支（假设仅有一个master分支）有新的提交而本地仓库没有更新同步到这个提交，所以本地仓库向远程仓库推送提交的时候会报出这个错误。解决的方法是先把远程仓库的提交抓取下来再提交。<br>    <figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git pull</div><div class="line"><span class="variable">$ </span>git push</div></pre></td></tr></table></figure></p>
+<p>注意：<code>git pull</code>会提示”Please enter a commit message to explain why this merge is necessary, especially if it merges an updated upstream into a topic branch。”，意思是输入可以描述此次合并分支的提交信息。可以选择写也可以不写，然后按下<code>Esc</code>键输入<code>:wq</code>（强制性写入文件并退出），按下<code>Enter</code>就可以了。</p>
+
+        
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/13/IFE热身题-小球吃星星/" class="archive-article-date">
-      <time datetime="2017-03-13T09:38:47.000Z" itemprop="datePublished">03-13</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/IFE热身题-小球吃星星/">IFE热身题-小球吃星星</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试题/">测试题</a></li></ul>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/14/git使用中遇到的错误/">git使用中遇到的错误</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
+        <p><span>发布时间:</span>2017年03月14日 - 18时41分</p>
+        <p><span>最后更新:</span>2017年03月14日 - 19时14分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/14/git使用中遇到的错误/" title="git使用中遇到的错误">http://ChunlLing.github.io.com/2017/03/14/git使用中遇到的错误/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/14/git使用中遇到的错误/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/13/IFE热身题-小球吃星星/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">IFE热身题-小球吃星星</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/12/Javascript基础笔记/" class="archive-article-date">
-      <time datetime="2017-03-11T17:04:40.000Z" itemprop="datePublished">03-12</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/03/14/git使用中遇到的错误/" data-title="git使用中遇到的错误" data-url="http://ChunlLing.github.io.com/2017/03/14/git使用中遇到的错误/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"chunlling"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/03/13/IFE热身题-小球吃星星/" title="下一篇: IFE热身题-小球吃星星">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/14/git使用中遇到的错误/">git使用中遇到的错误</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/IFE热身题-小球吃星星/">IFE热身题-小球吃星星</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/停一下，再奔跑/">停一下，再奔跑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/">小白爱折腾之hexo+GitHub搭建个人博客</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/11/停一下，再奔跑/" class="archive-article-date">
-      <time datetime="2017-03-10T16:46:09.000Z" itemprop="datePublished">03-11</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/11/停一下，再奔跑/">停一下，再奔跑</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/" class="archive-article-date">
-      <time datetime="2017-03-08T06:51:01.000Z" itemprop="datePublished">03-08</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/">小白爱折腾之hexo+GitHub搭建个人博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
@@ -443,17 +468,6 @@
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js">
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
