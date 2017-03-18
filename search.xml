@@ -4,6 +4,34 @@
   
     
     <entry>
+      <title><![CDATA[Less学习笔记]]></title>
+      <url>http://ChunlLing.github.io.com/2017/03/18/LESS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>记录Less学习的笔记。</p>
+<h1 id="Less简介及安装"><a href="#Less简介及安装" class="headerlink" title="Less简介及安装"></a>Less简介及安装</h1><p><a href="http://lesscss.org/" target="_blank" rel="external">Less官网</a><br><a href="http://less.bootcss.com/#" target="_blank" rel="external">Less中文官网</a></p>
+<p>服务器端安装：<code>$ npm install -g less</code></p>
+<p>使用sublime text编译：’Ctrl+Shift+P’打开命令面板，输入<code>install package</code>，安装<code>lessc</code>、<code>Less2Css</code>两个插件。<br>此时新建一个less文件会提示一个错误<code>LESS:Unable to interpret argument clean-css</code>。解决方法：<code>Window+R</code>输入<code>cmd</code>打开命令面板，输入命令：<code>npm install less-plugin-clean-css</code>。</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>变量的作用是把值定义在一个地方，在需要的地方直接使用变量名引用，有利于代码复用和维护。（理解为C中的<code>defined</code>？）<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 定义变量形式：@variableName: value;</span></div><div class="line"><span class="variable">@color:</span> <span class="number">#123456</span>;</div><div class="line"><span class="comment">// 引用变量：@variableName</span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">	<span class="attribute">background-color</span>: <span class="variable">@color</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h2><p>在Less中可以定义一些通用的属性集为一个class，然后在另一个选择器中去引用这个class。<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 不带括号的声明在编译后的css文件中可以看到这个类的声明</span></div><div class="line"><span class="selector-class">.box-1</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box-2</span>() &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box-3</span>(<span class="variable">@num</span>) &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="variable">@num</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="variable">@num</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box-4</span>(<span class="variable">@num</span>: <span class="number">200px</span>) &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="variable">@num</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="variable">@num</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">    <span class="attribute">background-color</span>: <span class="number">#222</span>;</div><div class="line">    </div><div class="line">    <span class="selector-class">.box-1</span>;		<span class="comment">// 不能加()</span></div><div class="line">    <span class="selector-class">.box-2</span>();	<span class="comment">// 必须要加()</span></div><div class="line">    <span class="selector-class">.box-3</span>(<span class="number">100px</span>);	<span class="comment">// 必须传入一个参数</span></div><div class="line">    <span class="selector-class">.box-3</span>();		<span class="comment">// 可以不传参，使用默认值</span></div><div class="line">    <span class="selector-class">.box-3</span>(<span class="number">400px</span>);	<span class="comment">// 可以自定义参数</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>编译后的结果：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box-1</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">display</span>: block;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#222</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">400px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>对于多参数，可以使用逗号<code>,</code>或分号<code>;</code>分隔不同的参数，但建议使用分号进行分隔。因为逗号分隔的参数可能在编译过程中被当做一个参数的值是一个列表。举个例子~<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box-1</span>(<span class="variable">@color</span>: red; <span class="variable">@width</span>: <span class="number">2px</span>)&#123;...&#125;</div><div class="line"><span class="selector-class">.box-2</span>(<span class="variable">@color</span>: red green blue; <span class="variable">@width</span>: <span class="number">2px</span>)&#123;...&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="模式匹配"><a href="#模式匹配" class="headerlink" title="模式匹配"></a>模式匹配</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>(rect, <span class="variable">@num</span>) &#123;</div><div class="line">	<span class="attribute">border-width</span>: <span class="variable">@num</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>(circle, <span class="variable">@num</span>) &#123;</div><div class="line">	<span class="attribute">border-radius</span>: <span class="variable">@num</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>(<span class="variable">@all</span>, <span class="variable">@num</span>) &#123;</div><div class="line">	<span class="attribute">display</span>: block;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>(<span class="variable">@num</span>) &#123;</div><div class="line">	<span class="attribute">font-size</span>: <span class="variable">@num</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.test1</span> &#123;</div><div class="line">	<span class="selector-class">.box</span>(rect, <span class="number">2px</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="variable">@switch:</span> circle;</div><div class="line"><span class="selector-class">.test2</span> &#123;</div><div class="line">	<span class="selector-class">.box</span>(<span class="variable">@switch</span>, <span class="number">3px</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>编译后：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.test1</span> &#123;</div><div class="line">  <span class="attribute">border-width</span>: <span class="number">2px</span>;</div><div class="line">  <span class="attribute">display</span>: block;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.test2</span> &#123;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">3px</span>;</div><div class="line">  <span class="attribute">display</span>: block;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Less </tag>
+            
+            <tag> CSS </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[git使用中遇到的错误]]></title>
       <url>http://ChunlLing.github.io.com/2017/03/14/git%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%94%99%E8%AF%AF/</url>
       <content type="html"><![CDATA[<p>用以记录在使用git时遇到的错误方便自查~</p>
@@ -16,9 +44,9 @@
         
         <tags>
             
-            <tag> git </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> git </tag>
             
         </tags>
         
@@ -231,9 +259,9 @@
         
         <tags>
             
-            <tag> JS </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> JS </tag>
             
         </tags>
         
