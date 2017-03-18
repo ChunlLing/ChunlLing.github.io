@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Less学习笔记]]></title>
-      <url>http://ChunlLing.github.io.com/2017/03/18/Less%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <url>http://ChunlLing.github.io.com/2017/03/18/LESS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>记录Less学习的笔记。</p>
 <h1 id="Less简介及安装"><a href="#Less简介及安装" class="headerlink" title="Less简介及安装"></a>Less简介及安装</h1><p><a href="http://lesscss.org/" target="_blank" rel="external">Less官网</a><br><a href="http://less.bootcss.com/#" target="_blank" rel="external">Less中文官网</a></p>
 <p>服务器端安装：<code>$ npm install -g less</code></p>
@@ -333,9 +333,9 @@
         
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> JS </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
         
