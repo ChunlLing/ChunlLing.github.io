@@ -5,23 +5,95 @@
   
   <title>JavaScript基础笔记 | (&gt;^ω^&lt;)喵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript简介一个完整的JavaScript实现 = 核心（ECMAScript） + 文档对象模型（DOM） + 浏览器对象模型（BOM）
-ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型、语句、关键字、保留字、操作符、对象。ECMAScript与Web浏览器没有依赖关系。实际上，这门语言本身并不包含输入和输出定义。
-文档对象模型（DOM）">
+  <meta name="description" content="基本语法Javascript区分大小写。
+标识符命名规则：
+
+第一个字符必须是一个字母、下划线_或一个美元符号$
+其他字符可以是字母、下划线、美元符号或数字
+不能把关键字、保留字、true、false和null作为标识符
+
+
+
+
+ECMAScript全部关键字
+
+
+
+
+break
+case
+catch
+continue
+default
+
+
+delete
+do
+else
+finally
+for">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript基础笔记">
 <meta property="og:url" content="http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/index.html">
 <meta property="og:site_name" content="(>^ω^<)喵">
-<meta property="og:description" content="JavaScript简介一个完整的JavaScript实现 = 核心（ECMAScript） + 文档对象模型（DOM） + 浏览器对象模型（BOM）
-ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型、语句、关键字、保留字、操作符、对象。ECMAScript与Web浏览器没有依赖关系。实际上，这门语言本身并不包含输入和输出定义。
-文档对象模型（DOM）">
+<meta property="og:description" content="基本语法Javascript区分大小写。
+标识符命名规则：
+
+第一个字符必须是一个字母、下划线_或一个美元符号$
+其他字符可以是字母、下划线、美元符号或数字
+不能把关键字、保留字、true、false和null作为标识符
+
+
+
+
+ECMAScript全部关键字
+
+
+
+
+break
+case
+catch
+continue
+default
+
+
+delete
+do
+else
+finally
+for">
 <meta property="og:image" content="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png">
-<meta property="og:updated_time" content="2017-03-19T16:38:28.528Z">
+<meta property="og:updated_time" content="2017-03-20T12:41:36.954Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础笔记">
-<meta name="twitter:description" content="JavaScript简介一个完整的JavaScript实现 = 核心（ECMAScript） + 文档对象模型（DOM） + 浏览器对象模型（BOM）
-ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型、语句、关键字、保留字、操作符、对象。ECMAScript与Web浏览器没有依赖关系。实际上，这门语言本身并不包含输入和输出定义。
-文档对象模型（DOM）">
+<meta name="twitter:description" content="基本语法Javascript区分大小写。
+标识符命名规则：
+
+第一个字符必须是一个字母、下划线_或一个美元符号$
+其他字符可以是字母、下划线、美元符号或数字
+不能把关键字、保留字、true、false和null作为标识符
+
+
+
+
+ECMAScript全部关键字
+
+
+
+
+break
+case
+catch
+continue
+default
+
+
+delete
+do
+else
+finally
+for">
 <meta name="twitter:image" content="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png">
   
   
@@ -150,7 +222,7 @@ ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型�
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JS/" style="font-size: 15px;">JS</a> <a href="/tags/Less/" style="font-size: 10px;">Less</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/测试题/" style="font-size: 10px;">测试题</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JS/" style="font-size: 20px;">JS</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/测试题/" style="font-size: 10px;">测试题</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
                     </div>
                 </section>
                 
@@ -257,43 +329,7 @@ ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型�
       
         
         
-          <h1 id="JavaScript简介"><a href="#JavaScript简介" class="headerlink" title="JavaScript简介"></a>JavaScript简介</h1><p>一个完整的JavaScript实现 = 核心（ECMAScript） + 文档对象模型（DOM） + 浏览器对象模型（BOM）</p>
-<h2 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h2><p>　　由ECMA-262定义的EAMAScript的组成部分：语法、类型、语句、关键字、保留字、操作符、对象。ECMAScript与Web浏览器没有依赖关系。实际上，这门语言本身并不包含输入和输出定义。</p>
-<h2 id="文档对象模型（DOM）"><a href="#文档对象模型（DOM）" class="headerlink" title="文档对象模型（DOM）"></a>文档对象模型（DOM）</h2><p>　　文档对象模型（DOM,Document Object Model）是针对XML但经过扩展用于HTML的应用程序编程接口（API,Application Programming Interface）。DOM把整个页面映射为一个多层节点结构。HTML或XML页面中的每个组成部分都是某种类型的节点，这些节点包含着不同类型的数据。</p>
-<p>　　DOM1级（DOM Level1）组成模块：DOM核心（DOM Core）和DOM HTML。</p>
-<p>　　DOM2级引入新模块：</p>
-<pre><code>- DOM视图（DOM View）：定义论文跟踪不同文档视图的接口；
-- DOM事件（DOM Events）：定义了事件和事件处理的接口；
-- DOM样式（DOM Style）：定义了基于CSS为元素应用样式的接口；
-- DOM遍历和范围（DOM Traversal and Range）：定义了遍历和操作文档树的接口。
-</code></pre><p>　　DOM3级进一步扩展DOM：</p>
-<pre><code>- 引入了以统一方式加载和保存文档的方法－－在DOM加载和保存（DOM Load and Sava）模块中定义；
-- 新增了验证文档的方法－－在DOM验证（DOM Validation）模块中定义。
-</code></pre><h2 id="浏览器对象模型（BOM）"><a href="#浏览器对象模型（BOM）" class="headerlink" title="浏览器对象模型（BOM）"></a>浏览器对象模型（BOM）</h2><p>　　提供与浏览器交互的方法和接口。</p>
-<hr>
-<h1 id="在HTML中使用JavaScript"><a href="#在HTML中使用JavaScript" class="headerlink" title="在HTML中使用JavaScript"></a>在HTML中使用JavaScript</h1><h2 id="script元素"><a href="#script元素" class="headerlink" title="script元素"></a>script元素</h2><p><code>&lt;script&gt;</code>元素定义了下列6个属性：</p>
-<ul>
-<li>async：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本，只对外部脚本文件有效。</li>
-<li>charset：可选。表示通过<code>src</code>属性指定的代码的字符集。较少使用。</li>
-<li>defer：可选。表示脚本可以延迟到文档完全被解析和显示之后再执行。只对外部脚本文件有效。</li>
-<li>language：已废弃。原来用于表示编写代码使用的脚本语言（如JavaScript、JavaScript1.2或VBScript）</li>
-<li>src：可选。表示包含要执行代码的外部文件。</li>
-<li>type：可选。可以看成是<code>language</code>的替代属性；表示编写代码使用的脚本语言的内容类型（也称为MIME类型）。虽然<code>text/javascript</code>和<code>text/ecmascript</code>都已经不被推荐使用，但人们一直以来使用的都还是<code>text/javascript</code>。实际上，服务器在传送JavaScript文件是使用的MIME类型通常是<code>application/x-javascript</code>，但在type中设置这个值却可能导致脚本被忽略。另外，在非IE浏览器中还可以使用以下值：<code>application/javascript</code>和<code>application/ecmascript</code>。考虑到约定俗成和最大限度的浏览器兼容性，目前type属性的值依旧是<code>text/javascript</code>。不过，这个属性并不是必需的，如果没有指定这个属性，则其默认值仍为<code>text/javascript</code>。</li>
-</ul>
-<p>按照惯例，外部JavaScript文件带有.js扩展名。但这个扩展名不是必需的，因为浏览器不会检查包含JavaScript的文件1的扩展名。这样一来，使用JSP、PHP或者其他服务端语言动态生成JavaScript代码也就成为了可能。但是，服务器通常还是需要看扩展名决定为响应应用哪种MIME类型。如果不使用.js扩展名，需确保服务器能返回正确的MIME类型。</p>
-<p>延迟脚本两种方式：</p>
-<ol>
-<li>将延迟脚本放在页面底部。</li>
-<li>使用<code>defer</code>属性。HTML5规范要求脚本按照它们出现的先后顺序执行，因此第一个延迟脚本会先于第二个延迟脚本执行，而这两个脚本会先于<code>DOMContentLoaded</code>事件执行。在显示当中，延迟脚本并不一定会按照顺序执行，也不一定会在<code>DOMContentLoaded</code>事件触发前执行，因此最好只包含一个延迟脚本。支持HTML5的实现会忽略给嵌入脚本设置的<code>defer</code>属性。</li>
-</ol>
-<p>异步脚本：<br><code>async</code>标记的脚本并不保证按照指定它们的先后顺序执行。指定<code>async</code>属性的目的是不让页面等待连个脚本下载和执行，从而异步加载页面其他内容。异步脚本一定会在页面的<code>load</code>事件前执行，但可能在<code>DOMContentLoaded</code>事件触发之前或之后执行。</p>
-<h2 id="noscript元素"><a href="#noscript元素" class="headerlink" title="noscript元素"></a>noscript元素</h2><p><code>&lt;noscript&gt;</code>用以在不支持JavaScript的浏览器中显示替代的内容。只有在以下两个情况下灰起作用：</p>
-<ul>
-<li>浏览器不支持脚本</li>
-<li>浏览器支持脚本，但脚本被禁止</li>
-</ul>
-<hr>
-<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p>Javascript区分大小写。</p>
+          <h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p>Javascript区分大小写。</p>
 <p>标识符命名规则：</p>
 <ul>
 <li>第一个字符必须是一个字母、下划线<code>_</code>或一个美元符号<code>$</code></li>
@@ -395,9 +431,7 @@ ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型�
 </tbody>
 </table>
 <p>注释：<code>//</code>单行注释 | <code>/* */</code>多行注释</p>
-<p>严格模式：<code>&quot;use strict&quot;;</code><br>这是一个编译指示，用于告诉支持的JavaScript引擎切换到严格模式。可以在全局使用，也可以指定函数在严格模式下执行。</p>
-<p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。<br>虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。<br>可选分号通用规则：如果当前语句和下一行语句无法合并解析，Javascrpt则在第一行后填补分号。<br>示例：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> a</div><div class="line">a</div><div class="line">=</div><div class="line"><span class="number">3</span></div><div class="line">console.log(a)</div></pre></td></tr></table></figure>
+<p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。<br>虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。<br>可选分号通用规则：如果当前语句和下一行语句无法合并解析，Javascrpt则在第一行后填补分号。<br>示例：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> a</div><div class="line">a</div><div class="line">=</div><div class="line"><span class="number">3</span></div><div class="line">console.log(a)</div></pre></td></tr></table></figure></p>
 <p>等价于<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a<span class="comment">;</span></div><div class="line"><span class="attribute">a</span> = <span class="number">3</span><span class="comment">;</span></div><div class="line">console.log(a)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
 <p>两个例外：</p>
 <ol>
@@ -415,36 +449,16 @@ ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型�
 <p>赋值语句：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var x</span> = 0;</div></pre></td></tr></table></figure></p>
 <p>字符串也可以视为完整的语句<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello World!"</span></div></pre></td></tr></table></figure></p>
 <p>注意如果字符串不用<code>&#39;&#39;</code>或<code>&quot;&quot;</code>包裹会抛出<code>ReferenceError（引用错误）</code>。</p>
-<hr>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="原始类型（primitive-type）"><a href="#原始类型（primitive-type）" class="headerlink" title="原始类型（primitive type）"></a>原始类型（primitive type）</h2><h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><p>包含两种数值：整数和浮点数。<br>八进制数值字面量：前导为<code>0</code><br>十六进制数值字面量：前导为<code>0x</code><br>浮点类型数值包含一个小数点，且小数点后面必须至少有一位数字。由于保存浮点数值需要的内存空间比整数型数值大两倍，如果浮点数值小数点后没有数字或数字都为0会自动转化为整型。<br>对于过大或过小的数值可以用科学表示法<code>e表示法</code>，用e表示该数值的前面数值的10的指数次幂。浮点数值的范围在：<code>Number.MIN_VALUE</code>到<code>Number.MAX_VALUE</code>之间。如果超过了浮点数值范围的最大值或最小值，则会出现<code>Infinity（正无穷）</code>或<code>-Infinity（负无穷）</code>。<br><code>isFinite()</code>函数可以确定一个数值是否超过了规定范围，没有超过返回<code>true</code>，超过返回<code>false</code>。<br><code>NaN</code>即Not a Number，用于表示一个本来要返回数值的操作数未返回数值的情况（这样就不回抛出错误）。<code>NaN</code>与任何值都不相等，包括它自身。<br>判别一个字面量x是否为<code>NaN</code>有两种方式：<code>x != x</code> 或者 <code>isNaN(x)</code> 。注意，<code>isNaN(true)</code>会返回<code>false</code>，因为<code>true</code>会被转换为数字1。<br>非数值转化为数值：<code>Number()</code>、<code>parseInt()</code>、<code>parseFloat()</code></p>
-<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>用于表示由零或多个16位Unicode字符组成的字符串。<br><code>String</code>类型包含了一些特殊的字符字面量，也叫转义序列。<br>| 字面量 | 含义 |<br>|——–|——–|<br>|   \n     | 换行       |<br>|   \t     | 制表       |<br>|   \b     | 空格       |<br>|   \r     | 回车       |<br>|   \f     | 进制       |<br>|   \     | 斜杠       |<br>|   \’     | 单引号       |<br>|   \”     | 双引号       |<br>|   \xnn    | 以十六进制代码nn表示一个字符（0~F）。例：\x41       |<br>|   \unnnn     | 以十六进制代码nnn表示的一个Unicode字符（0~F）。例：\u03a0       |</p>
-<h3 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h3><p>有两个值：<code>true</code>和<code>false</code>。而<code>true</code>不一定等于1，<code>false</code>不一定等于0.由于JavaScript区分大小写，所以<code>TRUE</code>和<code>FALSE</code>或其他不是Boolean类型的值。<br>其他类型转换成Boolean类型规则：<img src="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png" alt="其他类型转换成Boolean类型规则"></p>
-<h3 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h3><p>只用一个值<code>null</code>。表示一个空对象引用（指针）。使用<code>typeof</code>操作符检测<code>null</code>会返回<code>object</code></p>
-<h3 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a>Undefined</h3><p>只有一个值<code>undefined</code>。在使用<code>var</code>声明变量但没有对其初始化时，这个变量的值就是<code>undefined</code><br>对于未初始化的变量与未声明的变量，使用<code>typeof</code>操作符时都是返回<code>undefined</code>。从逻辑上而言，前者的值是<code>undefined</code>，而后者是<code>ReferenceError（引用错误）</code></p>
-<h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><p>在ECMAScript中，引用类型是一种数据结构，用于将数据和功能组织在一起。</p>
-<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><p>ECMAScript中的对象是一组数据和功能的集合。对象可以通过执行<code>new</code>操作符后跟要创建的对象类型的名称来创建。而创建Object类型的实例并为其添加属性和（或）方法，就可以创建自定义对象。如：<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="number">0</span> = <span class="keyword">new</span> <span class="built_in">Object</span>();</div></pre></td></tr></table></figure></p>
-<p>在ECMAScript中，如果不给构造函数传递参数可以省略圆括号，但不推荐此做法。</p>
-<p>在ECMAScript中，object类型是所有实例的基础，对于每一个Object实例都具有以下属性和方法：</p>
-<ul>
-<li><code>Constructor</code>：构造函数保存着用于创建当前对象的函数。</li>
-<li><code>hasOwnProperty(propertyName)</code>：用于检查给定的属性在当前对象实例中（而不是在实例原型中继承来的）是否存在。参数必须以字符串形式指定。</li>
-<li><code>isPrototypeOf(object)</code>：用于检查传入的对象是否是另一个对象的原型。</li>
-<li><code>propertyIsEnumerable(propertyName)</code>：用于检查给定的属性是否能够使用<code>for-in</code>语句来枚举，参数名必须为字符串形式。</li>
-<li><code>toLocaleString()</code>：返回对象的字符串表示。该字符串与执行环境的地区对应。</li>
-<li><code>tiString()</code>：返回对象的字符串表示。</li>
-<li><code>valueOf()</code>：返回对象的字符串、数值或布尔值表示。</li>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="原始类型（primitive-type）"><a href="#原始类型（primitive-type）" class="headerlink" title="原始类型（primitive type）"></a>原始类型（primitive type）</h2><ul>
+<li>Number<br>  包含两种数值：整数和浮点数。<br>  八进制数值字面量：前导为<code>0</code><br>  十六进制数值字面量：前导为<code>0x</code><br>  浮点类型数值包含一个小数点，且小数点后面必须至少有一位数字。由于保存浮点数值需要的内存空间比整数型数值大两倍，如果浮点数值小数点后没有数字或数字都为0会自动转化为整型。<br>  对于过大或过小的数值可以用科学表示法<code>e表示法</code>，用e表示该数值的前面数值的10的指数次幂。浮点数值的范围在：<code>Number.MIN_VALUE</code>到<code>Number.MAX_VALUE</code>之间。如果超过了浮点数值范围的最大值或最小值，则会出现<code>Infinity（正无穷）</code>或<code>-Infinity（负无穷）</code>。<br>  <code>isFinite()</code>函数可以确定一个数值是否超过了规定范围，没有超过返回<code>true</code>，超过返回<code>false</code>。<br>  <code>NaN</code>即Not a Number，用于表示一个本来要返回数值的操作数未返回数值的情况（这样就不回抛出错误）。<code>NaN</code>与任何值都不相等，包括它自身。<br>  判别一个字面量x是否为<code>NaN</code>有两种方式：<code>x != x</code> 或者 <code>isNaN(x)</code> 。注意，<code>isNaN(true)</code>会返回<code>false</code>，因为<code>true</code>会被转换为数字1。<br>  非数值转化为数值：<code>Number()</code>、<code>parseInt()</code>、<code>parseFloat()</code></li>
+<li>String<br>  用于表示由零或多个16位Unicode字符组成的字符串。</li>
+<li>Boolean<br>  有两个值：<code>true</code>和<code>false</code>。而<code>true</code>不一定等于1，<code>false</code>不一定等于0.由于JavaScript区分大小写，所以<code>TRUE</code>和<code>FALSE</code>或其他不是Boolean类型的值。<br>  其他类型转换成Boolean类型规则：<img src="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png" alt="其他类型转换成Boolean类型规则"></li>
+<li>NULL<br>  只用一个值<code>null</code>。表示一个空对象引用（指针）。使用<code>typeof</code>操作符检测<code>null</code>会返回<code>object</code></li>
+<li>Undefined<br>  只有一个值<code>undefined</code>。在使用<code>var</code>声明变量但没有对其初始化时，这个变量的值就是<code>undefined</code><br>  对于未初始化的变量与未声明的变量，使用<code>typeof</code>操作符时都是返回<code>undefined</code>。从逻辑上而言，前者的值是<code>undefined</code>，而后者是<code>ReferenceError（引用错误）</code><h2 id="对象类型（objext-type）"><a href="#对象类型（objext-type）" class="headerlink" title="对象类型（objext type）"></a>对象类型（objext type）</h2></li>
+<li>Array</li>
+<li>Object<br>原始值是 <em>不可更改</em> 的；原始值得比较是 <em>值</em> 的比较。<br>对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</li>
 </ul>
-<p>原始值是 <em>不可更改</em> 的；原始值得比较是 <em>值</em> 的比较。<br>对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</p>
-<hr>
-<h1 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h1><h2 id="一元操作符"><a href="#一元操作符" class="headerlink" title="一元操作符"></a>一元操作符</h2><p>只能操作一个值的操作符。</p>
-<h3 id="递增-递减"><a href="#递增-递减" class="headerlink" title="递增++/递减--"></a>递增<code>++</code>/递减<code>--</code></h3><p>在应用不同的值是，递增和递减操作符遵循如下规则：</p>
-<ul>
-<li>在应用于一个包含有效数字字符的字符串时，先将其转化为数字值，再执行加减操作。</li>
-<li>在应用于一个不包含有效数字字符的字符串时，将变量的值设置为NaN。</li>
-<li>在应用于布尔值false/true时，先将其转化为0/1再执行加减操作。</li>
-<li>在应用于对象时，先调用对象的valueOf()方法以取得一个可供操作的值。然后对该值应用前述规则。如果结果是NaN,则调用toString()方法后在应用前述规则。<br>不管变量原先是什么类型，最终的变量类型为数值型。</li>
-</ul>
-<h3 id="一元加和减操作符"><a href="#一元加和减操作符" class="headerlink" title="一元加和减操作符"></a>一元加和减操作符</h3><p><strong>typeof</strong>操作符：用来检测变量的数据类型</p>
+<p><strong>typeof</strong>操作符：用来检测变量的数据类型</p>
 
         
       
@@ -457,7 +471,7 @@ ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型�
         <p><span>本文标题:</span><a href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
         <p><span>发布时间:</span>2017年03月12日 - 01时04分</p>
-        <p><span>最后更新:</span>2017年03月20日 - 00时38分</p>
+        <p><span>最后更新:</span>2017年03月20日 - 20时41分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/12/Javascript基础笔记/" title="JavaScript基础笔记">http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/</a>
             <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -495,7 +509,7 @@ ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型�
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript简介"><span class="toc-number">1.</span> <span class="toc-text">JavaScript简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ECMAScript"><span class="toc-number">1.1.</span> <span class="toc-text">ECMAScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文档对象模型（DOM）"><span class="toc-number">1.2.</span> <span class="toc-text">文档对象模型（DOM）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器对象模型（BOM）"><span class="toc-number">1.3.</span> <span class="toc-text">浏览器对象模型（BOM）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#在HTML中使用JavaScript"><span class="toc-number">2.</span> <span class="toc-text">在HTML中使用JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#script元素"><span class="toc-number">2.1.</span> <span class="toc-text">script元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#noscript元素"><span class="toc-number">2.2.</span> <span class="toc-text">noscript元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本语法"><span class="toc-number">3.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-number">4.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原始类型（primitive-type）"><span class="toc-number">4.1.</span> <span class="toc-text">原始类型（primitive type）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Number"><span class="toc-number">4.1.1.</span> <span class="toc-text">Number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String"><span class="toc-number">4.1.2.</span> <span class="toc-text">String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean"><span class="toc-number">4.1.3.</span> <span class="toc-text">Boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NULL"><span class="toc-number">4.1.4.</span> <span class="toc-text">NULL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Undefined"><span class="toc-number">4.1.5.</span> <span class="toc-text">Undefined</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用类型"><span class="toc-number">4.2.</span> <span class="toc-text">引用类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Object"><span class="toc-number">4.2.1.</span> <span class="toc-text">Object</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#操作符"><span class="toc-number">5.</span> <span class="toc-text">操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一元操作符"><span class="toc-number">5.1.</span> <span class="toc-text">一元操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#递增-递减"><span class="toc-number">5.1.1.</span> <span class="toc-text">递增++/递减--</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一元加和减操作符"><span class="toc-number">5.1.2.</span> <span class="toc-text">一元加和减操作符</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基本语法"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-number">2.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原始类型（primitive-type）"><span class="toc-number">2.1.</span> <span class="toc-text">原始类型（primitive type）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象类型（objext-type）"><span class="toc-number">2.2.</span> <span class="toc-text">对象类型（objext type）</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -577,7 +591,7 @@ ECMAScript　　由ECMA-262定义的EAMAScript的组成部分：语法、类型�
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/18/LESS学习笔记/">Less学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/14/git使用中遇到的错误/">git使用中遇到的错误</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/IFE热身题-小球吃星星/">IFE热身题-小球吃星星</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/停一下，再奔跑/">停一下，再奔跑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/">小白爱折腾之hexo+GitHub搭建个人博客</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/布局-圣杯布局和双飞翼布局/">CSS布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/14/git使用中遇到的错误/">git使用中遇到的错误</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/IFE热身题-小球吃星星/">IFE热身题-小球吃星星</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/停一下，再奔跑/">停一下，再奔跑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/">小白爱折腾之hexo+GitHub搭建个人博客</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
