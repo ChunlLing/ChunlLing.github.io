@@ -3,125 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>JavaScript基础笔记 | (&gt;^ω^&lt;)喵</title>
+  <title>js字符串截取 | (&gt;^ω^&lt;)喵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本语法
-Javascript区分大小写。
-标识符命名规则：
-
-第一个字符必须是一个字母、下划线_或一个美元符号$
-其他字符可以是字母、下划线、美元符号或数字
-不能把关键字、保留字、true、false和null作为标识符
-
-
-
-
-ECMAScript全部关键字
-
-
-
-
-break
-
-
-delete
-
-
-function
-
-
-return
-
-
-typeof
-
-
-
-
-
-
-ECMA-262第三版全部保">
+  <meta name="description" content="截取字符串的三个方法substring()，slice()和split()对比，substr()已废弃，不作考虑~
+substring()： 返回字符串的一个子串
+概要
+string.substring(from, to)
+*from *: 一个非负整数，指定要提取的子串的第一个字符在string中的位置
+*to *: 一个非负整数，比要提取的子串的最后一个字符的位置大1.如果省略这个参数，则返回">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript基础笔记">
-<meta property="og:url" content="http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/index.html">
+<meta property="og:title" content="js字符串截取">
+<meta property="og:url" content="http://ChunlLing.github.io.com/2017/03/29/js字符串截取/index.html">
 <meta property="og:site_name" content="(>^ω^<)喵">
-<meta property="og:description" content="基本语法
-Javascript区分大小写。
-标识符命名规则：
-
-第一个字符必须是一个字母、下划线_或一个美元符号$
-其他字符可以是字母、下划线、美元符号或数字
-不能把关键字、保留字、true、false和null作为标识符
-
-
-
-
-ECMAScript全部关键字
-
-
-
-
-break
-
-
-delete
-
-
-function
-
-
-return
-
-
-typeof
-
-
-
-
-
-
-ECMA-262第三版全部保">
-<meta property="og:image" content="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png">
-<meta property="og:updated_time" content="2017-03-20T12:41:36.954Z">
+<meta property="og:description" content="截取字符串的三个方法substring()，slice()和split()对比，substr()已废弃，不作考虑~
+substring()： 返回字符串的一个子串
+概要
+string.substring(from, to)
+*from *: 一个非负整数，指定要提取的子串的第一个字符在string中的位置
+*to *: 一个非负整数，比要提取的子串的最后一个字符的位置大1.如果省略这个参数，则返回">
+<meta property="og:updated_time" content="2017-03-29T08:17:29.559Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript基础笔记">
-<meta name="twitter:description" content="基本语法
-Javascript区分大小写。
-标识符命名规则：
-
-第一个字符必须是一个字母、下划线_或一个美元符号$
-其他字符可以是字母、下划线、美元符号或数字
-不能把关键字、保留字、true、false和null作为标识符
-
-
-
-
-ECMAScript全部关键字
-
-
-
-
-break
-
-
-delete
-
-
-function
-
-
-return
-
-
-typeof
-
-
-
-
-
-
-ECMA-262第三版全部保">
-<meta name="twitter:image" content="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png">
+<meta name="twitter:title" content="js字符串截取">
+<meta name="twitter:description" content="截取字符串的三个方法substring()，slice()和split()对比，substr()已废弃，不作考虑~
+substring()： 返回字符串的一个子串
+概要
+string.substring(from, to)
+*from *: 一个非负整数，指定要提取的子串的第一个字符在string中的位置
+*to *: 一个非负整数，比要提取的子串的最后一个字符的位置大1.如果省略这个参数，则返回">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -317,11 +225,11 @@ ECMA-262第三版全部保">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Javascript基础笔记" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-js字符串截取" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/12/Javascript基础笔记/" class="article-date">
-      <time datetime="2017-03-11T17:04:40.000Z" itemprop="datePublished">2017-03-12</time>
+      <a href="/2017/03/29/js字符串截取/" class="article-date">
+      <time datetime="2017-03-29T07:00:23.000Z" itemprop="datePublished">2017-03-29</time>
 </a>
     </div>
   
@@ -334,7 +242,7 @@ ECMA-262第三版全部保">
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript基础笔记
+      js字符串截取
     </h1>
   
 
@@ -345,7 +253,7 @@ ECMA-262第三版全部保">
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -356,124 +264,40 @@ ECMA-262第三版全部保">
       
         
         
-          <h1>基本语法</h1>
-<p>Javascript区分大小写。</p>
-<p>标识符命名规则：</p>
-<ul>
-<li>第一个字符必须是一个字母、下划线<code>_</code>或一个美元符号<code>$</code></li>
-<li>其他字符可以是字母、下划线、美元符号或数字</li>
-<li>不能把关键字、保留字、true、false和null作为标识符</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>ECMAScript全部关键字</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>break</td>
-</tr>
-<tr>
-<td>delete</td>
-</tr>
-<tr>
-<td>function</td>
-</tr>
-<tr>
-<td>return</td>
-</tr>
-<tr>
-<td>typeof</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>ECMA-262第三版全部保留字</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>abstract</td>
-</tr>
-<tr>
-<td>double</td>
-</tr>
-<tr>
-<td>implements</td>
-</tr>
-<tr>
-<td>package</td>
-</tr>
-<tr>
-<td>super</td>
-</tr>
-</tbody>
-</table>
-<p>注释：<code>//</code>单行注释 | <code>/* */</code>多行注释</p>
-<p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。
-虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。
-可选分号通用规则：如果当前语句和下一行语句无法合并解析，Javascrpt则在第一行后填补分号。
-示例：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> a</div><div class="line">a</div><div class="line">=</div><div class="line"><span class="number">3</span></div><div class="line">console.log(a)</div></pre></td></tr></table></figure>
-<p>等价于</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a<span class="comment">;</span></div><div class="line"><span class="attribute">a</span> = <span class="number">3</span><span class="comment">;</span></div><div class="line">console.log(a)<span class="comment">;</span></div></pre></td></tr></table></figure>
-<p>两个例外：</p>
-<ol>
-<li>
-<p>如果<code>return</code>、<code>break</code>和<code>continue</code>后紧跟着换行，则会在换行处填补分号。
-示例：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span></div><div class="line"><span class="literal">true</span></div></pre></td></tr></table></figure>
-<p>等价于</p>
- <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span>;</div><div class="line"><span class="literal">true</span>;</div></pre></td></tr></table></figure>
-</li>
-<li>
-<p>如果将<code>++</code>或<code>--</code>用做后缀表达式，应当和表达式在同一行，否则行尾自动填补分号。
-示例：</p>
- <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="section">x</span></div><div class="line">++</div><div class="line">y</div></pre></td></tr></table></figure>
-<p>等价于</p>
- <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x<span class="comment">;</span></div><div class="line">++y<span class="comment">;</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>赋值语句：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var x</span> = 0;</div></pre></td></tr></table></figure>
-<p>字符串也可以视为完整的语句</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello World!"</span></div></pre></td></tr></table></figure>
-<p>注意如果字符串不用<code>''</code>或<code>&quot;&quot;</code>包裹会抛出<code>ReferenceError（引用错误）</code>。</p>
-<h1>数据类型</h1>
-<h2>原始类型（primitive type）</h2>
-<ul>
-<li>Number
-包含两种数值：整数和浮点数。
-八进制数值字面量：前导为<code>0</code>
-十六进制数值字面量：前导为<code>0x</code>
-浮点类型数值包含一个小数点，且小数点后面必须至少有一位数字。由于保存浮点数值需要的内存空间比整数型数值大两倍，如果浮点数值小数点后没有数字或数字都为0会自动转化为整型。
-对于过大或过小的数值可以用科学表示法<code>e表示法</code>，用e表示该数值的前面数值的10的指数次幂。浮点数值的范围在：<code>Number.MIN_VALUE</code>到<code>Number.MAX_VALUE</code>之间。如果超过了浮点数值范围的最大值或最小值，则会出现<code>Infinity（正无穷）</code>或<code>-Infinity（负无穷）</code>。
-<code>isFinite()</code>函数可以确定一个数值是否超过了规定范围，没有超过返回<code>true</code>，超过返回<code>false</code>。
-<code>NaN</code>即Not a Number，用于表示一个本来要返回数值的操作数未返回数值的情况（这样就不回抛出错误）。<code>NaN</code>与任何值都不相等，包括它自身。
-判别一个字面量x是否为<code>NaN</code>有两种方式：<code>x != x</code> 或者 <code>isNaN(x)</code> 。注意，<code>isNaN(true)</code>会返回<code>false</code>，因为<code>true</code>会被转换为数字1。
-非数值转化为数值：<code>Number()</code>、<code>parseInt()</code>、<code>parseFloat()</code></li>
-<li>String
-用于表示由零或多个16位Unicode字符组成的字符串。</li>
-<li>Boolean
-有两个值：<code>true</code>和<code>false</code>。而<code>true</code>不一定等于1，<code>false</code>不一定等于0.由于JavaScript区分大小写，所以<code>TRUE</code>和<code>FALSE</code>或其他不是Boolean类型的值。
-其他类型转换成Boolean类型规则：<img src="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png" alt="其他类型转换成Boolean类型规则"></li>
-<li>NULL
-只用一个值<code>null</code>。表示一个空对象引用（指针）。使用<code>typeof</code>操作符检测<code>null</code>会返回<code>object</code></li>
-<li>Undefined
-只有一个值<code>undefined</code>。在使用<code>var</code>声明变量但没有对其初始化时，这个变量的值就是<code>undefined</code>
-对于未初始化的变量与未声明的变量，使用<code>typeof</code>操作符时都是返回<code>undefined</code>。从逻辑上而言，前者的值是<code>undefined</code>，而后者是<code>ReferenceError（引用错误）</code></li>
-</ul>
-<h2>对象类型（objext type）</h2>
-<ul>
-<li>Array</li>
-<li>Object
-原始值是 <em>不可更改</em> 的；原始值得比较是 <em>值</em> 的比较。
-对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</li>
-</ul>
-<p><strong>typeof</strong>操作符：用来检测变量的数据类型</p>
+          <p>截取字符串的三个方法<code>substring()</code>，<code>slice()</code>和<code>split()</code>对比，<code>substr()</code>已废弃，不作考虑~</p>
+<h1>substring()： 返回字符串的一个子串</h1>
+<h2>概要</h2>
+<p>string.substring(from, to)
+*from *: 一个非负整数，指定要提取的子串的第一个字符在string中的位置
+*to *: 一个非负整数，比要提取的子串的最后一个字符的位置大1.如果省略这个参数，则返回的子串将持续到string的结尾
+返回： 一个新的字符串，长度为to-from，内容为string的一个子串。新字符串的内容为string中从位置from到to-1的字符的副本</p>
+<h2>描述</h2>
+<p>如果from等于to，返回空字符串
+如果from比to大，先交换两个参数的值，然后返回它们之间的子串
+此方法不接受负参
+不修改string</p>
+<hr>
+<h1>slice()： 提取一个子串</h1>
+<h2>概要</h2>
+<p>string.slice(start, end)
+*start *: 切片开始的索引。如果为负，将从该字符串的尾部开始计算，如-1代表最后一个字符，-2代表倒数第二个字符
+*end *: 紧跟着切片结尾的字符串索引。如果不指定，切片将包括从start到当前字符串结尾的所有字符；如果参数为负，将从该字符串的尾部开始计算
+返回： 一个新的字符串，内容为string中自start位置开始并且包含start位置，直到但不包含end位置的所有字符</p>
+<h2>描述</h2>
+<p>返回一个字符串，内容为string中的一个切片或子串。
+不修改string</p>
+<hr>
+<h1>split(): 将一个字符串切分为一个由字符串组成的数组</h1>
+<h2>概要</h2>
+<p>string.split(delimiter, limit)
+*delimiter *: string切分处的字符串或正则表达式
+*limit *: 可选，整数，指定已返回数组的最大长度。如果指定，最多返回数量为这个数字的子串；如果没有指定，将切分整个字符串
+返回： 一个由字符串组成的数组</p>
+<h2>描述</h2>
+<p>split()方法创建并返回一个数组，内容为至多limit个给定的字符串string的子串。子串创建的方式：从string()的开头搜索到结尾，在所有匹配delimiter的文本的前后方断开。分割文本不包含在返回的子串中。但当delimiter为带圆括号的正则表达式时可返回匹配圆括号内的子串（@.@见快捷测试）</p>
+<hr>
+<p>快捷测试</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1 = <span class="string">'abcdef'</span>;</div><div class="line"><span class="built_in">console</span>.log(str1);</div><div class="line"><span class="built_in">console</span>.log(str1.substring(<span class="number">0</span>, <span class="number">3</span>));</div><div class="line"><span class="built_in">console</span>.log(str1);</div><div class="line"></div><div class="line"><span class="keyword">var</span> str2 = <span class="string">'abcdef'</span>;</div><div class="line"><span class="built_in">console</span>.log(str2);</div><div class="line"><span class="built_in">console</span>.log(str2.sclice(<span class="number">0</span>, <span class="number">3</span>));</div><div class="line"><span class="built_in">console</span>.log(str2);</div><div class="line"><span class="built_in">console</span>.log(str2.sclice(<span class="number">4</span>, <span class="number">-3</span>));</div><div class="line"></div><div class="line"><span class="keyword">var</span> str3 = <span class="string">'hello world'</span>;</div><div class="line"><span class="built_in">console</span>.log(str3);</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="string">' '</span>));</div><div class="line"><span class="built_in">console</span>.log(str3);</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="regexp">/hello/</span>));</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="regexp">/(hello)/</span>));</div><div class="line"></div><div class="line"><span class="keyword">var</span> str4 = <span class="string">'hello &lt;b&gt;world&lt;/b&gt;'</span>;</div><div class="line"><span class="built_in">console</span>.log(str4.split(<span class="regexp">/&lt;[^&gt;]*&gt;/</span>));</div><div class="line"></div><div class="line"><span class="keyword">var</span> str5 = <span class="string">'hello hello &lt;b&gt;world&lt;/b&gt;'</span>;</div><div class="line"><span class="built_in">console</span>.log(str5.split(<span class="regexp">/(&lt;[^&gt;]*&gt;)/</span>));</div></pre></td></tr></table></figure>
 
         
       
@@ -483,13 +307,13 @@ ECMA-262第三版全部保">
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></p>
+        <p><span>本文标题:</span><a href="/2017/03/29/js字符串截取/">js字符串截取</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
-        <p><span>发布时间:</span>2017年03月12日 - 01时04分</p>
-        <p><span>最后更新:</span>2017年03月20日 - 20时41分</p>
+        <p><span>发布时间:</span>2017年03月29日 - 15时00分</p>
+        <p><span>最后更新:</span>2017年03月29日 - 16时17分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/03/12/Javascript基础笔记/" title="JavaScript基础笔记">http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/29/js字符串截取/" title="js字符串截取">http://ChunlLing.github.io.com/2017/03/29/js字符串截取/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/29/js字符串截取/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -502,18 +326,9 @@ ECMA-262第三版全部保">
 
 <nav id="article-nav">
   
-    <a href="/2017/03/13/IFE热身题-小球吃星星/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          IFE热身题-小球吃星星
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/11/停一下，再奔跑/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">停一下，再奔跑</div>
+    <a href="/2017/03/24/布局-圣杯布局和双飞翼布局/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS布局</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -524,7 +339,7 @@ ECMA-262第三版全部保">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">原始类型（primitive type）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">对象类型（objext type）</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">substring()： 返回字符串的一个子串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">概要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">描述</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">slice()： 提取一个子串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">概要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">描述</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">split(): 将一个字符串切分为一个由字符串组成的数组</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.</span> <span class="toc-text">概要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.</span> <span class="toc-text">描述</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -572,7 +387,7 @@ ECMA-262第三版全部保">
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/03/12/Javascript基础笔记/" data-title="JavaScript基础笔记" data-url="http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/"></div>
+    <div class="ds-thread" data-thread-key="2017/03/29/js字符串截取/" data-title="js字符串截取" data-url="http://ChunlLing.github.io.com/2017/03/29/js字符串截取/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -595,13 +410,11 @@ ECMA-262第三版全部保">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/03/13/IFE热身题-小球吃星星/" title="上一篇: IFE热身题-小球吃星星">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/03/11/停一下，再奔跑/" title="下一篇: 停一下，再奔跑">
+            <a href="/2017/03/24/布局-圣杯布局和双飞翼布局/" title="下一篇: CSS布局">
                 <i class="fa fa-angle-right"></i>
             </a>
         

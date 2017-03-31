@@ -7,20 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="用以记录在使用git时遇到的错误方便自查~
 
-使用git push或git push origin master（向远程仓库提交）时遇到错误：    12345678To https://github.com/XXXX/XXXX.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some r">
+使用git push或git push origin master（向远程仓库提交）时遇到错误：
+	12345678To https://github.com/XXXX/XXXX.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some ref">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git使用中遇到的错误">
 <meta property="og:url" content="http://ChunlLing.github.io.com/2017/03/14/git使用中遇到的错误/index.html">
 <meta property="og:site_name" content="(>^ω^<)喵">
 <meta property="og:description" content="用以记录在使用git时遇到的错误方便自查~
 
-使用git push或git push origin master（向远程仓库提交）时遇到错误：    12345678To https://github.com/XXXX/XXXX.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some r">
+使用git push或git push origin master（向远程仓库提交）时遇到错误：
+	12345678To https://github.com/XXXX/XXXX.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some ref">
 <meta property="og:updated_time" content="2017-03-14T11:14:13.157Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用中遇到的错误">
 <meta name="twitter:description" content="用以记录在使用git时遇到的错误方便自查~
 
-使用git push或git push origin master（向远程仓库提交）时遇到错误：    12345678To https://github.com/XXXX/XXXX.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some r">
+使用git push或git push origin master（向远程仓库提交）时遇到错误：
+	12345678To https://github.com/XXXX/XXXX.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some ref">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -148,7 +151,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JS/" style="font-size: 20px;">JS</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/测试题/" style="font-size: 10px;">测试题</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/JS/" style="font-size: 20px;">JS</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/测试题/" style="font-size: 10px;">测试题</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a>
                     </div>
                 </section>
                 
@@ -257,9 +260,11 @@
         
           <p>用以记录在使用git时遇到的错误方便自查~</p>
 <hr>
-<p>使用<code>git push</code>或<code>git push origin master</code>（向远程仓库提交）时遇到错误：<br>    <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">To <span class="keyword">https</span>://github.com/XXXX/XXXX.git</div><div class="line"> ! [rejected]        master -&gt; master (fetch <span class="keyword">first</span>)</div><div class="line">error: failed <span class="built_in">to</span> push some refs <span class="built_in">to</span> <span class="string">'https://github.com/XXXX/XXXX.git'</span></div><div class="line">hint: Updates were rejected because <span class="keyword">the</span> remote <span class="keyword">contains</span> work that you <span class="built_in">do</span></div><div class="line">hint: <span class="keyword">not</span> have locally. This is usually caused <span class="keyword">by</span> another repository pushing</div><div class="line">hint: <span class="built_in">to</span> <span class="keyword">the</span> same ref. You may want <span class="built_in">to</span> <span class="keyword">first</span> integrate <span class="keyword">the</span> remote changes</div><div class="line">hint: (e.g., <span class="string">'git pull ...'</span>) <span class="keyword">before</span> pushing again.</div><div class="line">hint: See <span class="keyword">the</span> <span class="string">'Note about fast-forwards'</span> <span class="keyword">in</span> <span class="string">'git push --help'</span> <span class="keyword">for</span> details.</div></pre></td></tr></table></figure></p>
-<p>原因：远程仓库中的master分支（假设仅有一个master分支）有新的提交而本地仓库没有更新同步到这个提交，所以本地仓库向远程仓库推送提交的时候会报出这个错误。解决的方法是先把远程仓库的提交抓取下来再提交。<br>    <figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git pull</div><div class="line"><span class="variable">$ </span>git push</div></pre></td></tr></table></figure></p>
-<p>注意：<code>git pull</code>会提示”Please enter a commit message to explain why this merge is necessary, especially if it merges an updated upstream into a topic branch。”，意思是输入可以描述此次合并分支的提交信息。可以选择写也可以不写，然后按下<code>Esc</code>键输入<code>:wq</code>（强制性写入文件并退出），按下<code>Enter</code>就可以了。</p>
+<p>使用<code>git push</code>或<code>git push origin master</code>（向远程仓库提交）时遇到错误：
+	<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">To <span class="keyword">https</span>://github.com/XXXX/XXXX.git</div><div class="line"> ! [rejected]        master -&gt; master (fetch <span class="keyword">first</span>)</div><div class="line">error: failed <span class="built_in">to</span> push some refs <span class="built_in">to</span> <span class="string">'https://github.com/XXXX/XXXX.git'</span></div><div class="line">hint: Updates were rejected because <span class="keyword">the</span> remote <span class="keyword">contains</span> work that you <span class="built_in">do</span></div><div class="line">hint: <span class="keyword">not</span> have locally. This is usually caused <span class="keyword">by</span> another repository pushing</div><div class="line">hint: <span class="built_in">to</span> <span class="keyword">the</span> same ref. You may want <span class="built_in">to</span> <span class="keyword">first</span> integrate <span class="keyword">the</span> remote changes</div><div class="line">hint: (e.g., <span class="string">'git pull ...'</span>) <span class="keyword">before</span> pushing again.</div><div class="line">hint: See <span class="keyword">the</span> <span class="string">'Note about fast-forwards'</span> <span class="keyword">in</span> <span class="string">'git push --help'</span> <span class="keyword">for</span> details.</div></pre></td></tr></table></figure></p>
+<p>原因：远程仓库中的master分支（假设仅有一个master分支）有新的提交而本地仓库没有更新同步到这个提交，所以本地仓库向远程仓库推送提交的时候会报出这个错误。解决的方法是先把远程仓库的提交抓取下来再提交。
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git pull</div><div class="line"><span class="variable">$ </span>git push</div></pre></td></tr></table></figure></p>
+<p>注意：<code>git pull</code>会提示&quot;Please enter a commit message to explain why this merge is necessary, especially if it merges an updated upstream into a topic branch。&quot;，意思是输入可以描述此次合并分支的提交信息。可以选择写也可以不写，然后按下<code>Esc</code>键输入<code>:wq</code>（强制性写入文件并退出），按下<code>Enter</code>就可以了。</p>
 
         
       
@@ -392,7 +397,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/布局-圣杯布局和双飞翼布局/">CSS布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/14/git使用中遇到的错误/">git使用中遇到的错误</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/IFE热身题-小球吃星星/">IFE热身题-小球吃星星</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/停一下，再奔跑/">停一下，再奔跑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/">小白爱折腾之hexo+GitHub搭建个人博客</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/29/js字符串截取/">js字符串截取</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/布局-圣杯布局和双飞翼布局/">CSS布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/14/git使用中遇到的错误/">git使用中遇到的错误</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/IFE热身题-小球吃星星/">IFE热身题-小球吃星星</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/停一下，再奔跑/">停一下，再奔跑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/">小白爱折腾之hexo+GitHub搭建个人博客</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
