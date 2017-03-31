@@ -82,7 +82,7 @@ typeof
 
 ECMA-262第三版全部保">
 <meta property="og:image" content="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png">
-<meta property="og:updated_time" content="2017-03-20T12:41:36.954Z">
+<meta property="og:updated_time" content="2017-03-31T14:51:32.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础笔记">
 <meta name="twitter:description" content="基本语法
@@ -474,6 +474,17 @@ ECMA-262第三版全部保">
 对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</li>
 </ul>
 <p><strong>typeof</strong>操作符：用来检测变量的数据类型</p>
+<p>关于类型的几点规则：</p>
+<ul>
+<li>不要使用<code>new Number()</code>、<code>new Boolean()</code>、<code>new String()</code>创建包装对象；</li>
+<li>用<code>parseInt()</code>或<code>parseFloat()</code>来转换任意类型到<code>number</code>；</li>
+<li>用<code>String()</code>来转换任意类型到<code>string</code>，或直接调用某个对象的<code>toString()</code>方法；</li>
+<li><code>typeof</code>操作符可以判断出<code>number</code>、<code>boolean</code>、<code>string</code>、<code>function</code>和<code>undefined</code>；</li>
+<li>判断<code>Array</code>要使用<code>Array.isArray(arr)</code>；</li>
+<li>判断<code>null</code>要使用<code>variable === null</code>；</li>
+<li>判断某个全局变量是否存在用<code>typeof window.variable === 'undefined'</code>；</li>
+<li>函数内部判断某个变量是否存在用<code>typeof variable ==='undefined'</code>；</li>
+</ul>
 
         
       
@@ -486,7 +497,7 @@ ECMA-262第三版全部保">
         <p><span>本文标题:</span><a href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
         <p><span>发布时间:</span>2017年03月12日 - 01时04分</p>
-        <p><span>最后更新:</span>2017年03月20日 - 20时41分</p>
+        <p><span>最后更新:</span>2017年03月31日 - 22时51分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/12/Javascript基础笔记/" title="JavaScript基础笔记">http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/</a>
             <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

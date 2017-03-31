@@ -133,9 +133,9 @@
         
         <tags>
             
-            <tag> git </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> git </tag>
             
         </tags>
         
@@ -304,14 +304,25 @@
 对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</li>
 </ul>
 <p><strong>typeof</strong>操作符：用来检测变量的数据类型</p>
+<p>关于类型的几点规则：</p>
+<ul>
+<li>不要使用<code>new Number()</code>、<code>new Boolean()</code>、<code>new String()</code>创建包装对象；</li>
+<li>用<code>parseInt()</code>或<code>parseFloat()</code>来转换任意类型到<code>number</code>；</li>
+<li>用<code>String()</code>来转换任意类型到<code>string</code>，或直接调用某个对象的<code>toString()</code>方法；</li>
+<li><code>typeof</code>操作符可以判断出<code>number</code>、<code>boolean</code>、<code>string</code>、<code>function</code>和<code>undefined</code>；</li>
+<li>判断<code>Array</code>要使用<code>Array.isArray(arr)</code>；</li>
+<li>判断<code>null</code>要使用<code>variable === null</code>；</li>
+<li>判断某个全局变量是否存在用<code>typeof window.variable === 'undefined'</code>；</li>
+<li>函数内部判断某个变量是否存在用<code>typeof variable ==='undefined'</code>；</li>
+</ul>
 ]]></content>
       
         
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> JS </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
         
