@@ -146,7 +146,7 @@
       <url>http://ChunlLing.github.io.com/2017/03/13/IFE%E7%83%AD%E8%BA%AB%E9%A2%98-%E5%B0%8F%E7%90%83%E5%90%83%E6%98%9F%E6%98%9F/</url>
       <content type="html"><![CDATA[<p>下午做的四道题，觉得第四道hin有趣，又玩了几遍，做个记录~</p>
 <hr>
-<p>先看下题目
+<p>先看下题目<br>
 	<img src="http://ommn78ss1.bkt.clouddn.com/static/images/IFE%E7%83%AD%E8%BA%AB%E9%A2%98-%E5%B0%8F%E7%90%83%E5%90%83%E6%98%9F%E6%98%9F/Step4.PNG" alt="Step4"></p>
 <p>一开始看题目简直是一脸懵逼，后来在我不断钻研下，终于从万能的网友回答中看出了些门路~~~-_-|||</p>
 <p>根据文本框的提示<code>调用'ball'的api移动小球，例如'ball.at(82, 46, ball =&gt; ball.turnRight())'</code>大概知道这里用到的是ES6的<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="external">箭头函数</a>。<code>Ctrl+Shift+I</code>调出控制面板，输入<code>console.log(ball)</code>查看ball的API，然并卵，控制器输出的是<code>Uncaught ReferenceError: ball is not defined</code>。哼，我才不会就这么死心呢。打开控制台的<code>Sources</code>面板，<code>2017/asset\js</code>文件里面竟然有3个js文件！那好吧，格式下js文件（点击左下角的<code>{}</code>），<code>Ctrl+F</code>调出查找面板，查找<code>turnRight</code>，当当当，以下就是找到的关于<code>ball</code>的几个方法。
@@ -186,7 +186,12 @@
     <entry>
       <title><![CDATA[JavaScript基础笔记]]></title>
       <url>http://ChunlLing.github.io.com/2017/03/12/Javascript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h1>基本语法</h1>
+      <content type="html"><![CDATA[<p>学习资料来源：<br>
+<a href="https://book.douban.com/subject/10549733/" target="_blank" rel="external">JavaScript权威指南</a><br>
+<a href="https://book.douban.com/subject/10546125/" target="_blank" rel="external">JavaScript高级程序设计</a><br>
+<a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">廖雪峰–JavaScript全栈教程</a><br>
+<a href="http://study.163.com/course/introduction/252008.htm#/courseDetail" target="_blank" rel="external">李炎恢JavaScript教程 第一季</a></p>
+<h1>基本语法</h1>
 <p>Javascript区分大小写。</p>
 <p>标识符命名规则：</p>
 <ul>
@@ -194,54 +199,8 @@
 <li>其他字符可以是字母、下划线、美元符号或数字</li>
 <li>不能把关键字、保留字、true、false和null作为标识符</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>ECMAScript全部关键字</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>break</td>
-</tr>
-<tr>
-<td>delete</td>
-</tr>
-<tr>
-<td>function</td>
-</tr>
-<tr>
-<td>return</td>
-</tr>
-<tr>
-<td>typeof</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>ECMA-262第三版全部保留字</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>abstract</td>
-</tr>
-<tr>
-<td>double</td>
-</tr>
-<tr>
-<td>implements</td>
-</tr>
-<tr>
-<td>package</td>
-</tr>
-<tr>
-<td>super</td>
-</tr>
-</tbody>
-</table>
+<p><a href="http://www.w3school.com.cn/js/pro_js_keywords.asp" target="_blank" rel="external">ECMAScript全部关键字</a></p>
+<p><a href="http://www.w3school.com.cn/js/pro_js_reservedwords.asp" target="_blank" rel="external">ECMA-262第三版全部保留字</a></p>
 <p>注释：<code>//</code>单行注释 | <code>/* */</code>多行注释</p>
 <p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。
 虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。
@@ -270,7 +229,7 @@
 <p>赋值语句：</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var x</span> = 0;</div></pre></td></tr></table></figure>
 <p>字符串也可以视为完整的语句</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello World!"</span></div></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello World!"</span><span class="comment">;</span></div></pre></td></tr></table></figure>
 <p>注意如果字符串不用<code>''</code>或<code>&quot;&quot;</code>包裹会抛出<code>ReferenceError（引用错误）</code>。</p>
 <h1>数据类型</h1>
 <h2>原始类型（primitive type）</h2>
@@ -299,10 +258,10 @@
 <h2>对象类型（objext type）</h2>
 <ul>
 <li>Array</li>
-<li>Object
-原始值是 <em>不可更改</em> 的；原始值得比较是 <em>值</em> 的比较。
-对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</li>
+<li>Object</li>
 </ul>
+<p>原始值是 <em>不可更改</em> 的；原始值得比较是 <em>值</em> 的比较。
+对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</p>
 <p><strong>typeof</strong>操作符：用来检测变量的数据类型</p>
 <p>关于类型的几点规则：</p>
 <ul>
