@@ -45,7 +45,7 @@ scaffold">
 
 node_mdules
 scaffold">
-<meta property="og:updated_time" content="2017-03-20T12:41:36.960Z">
+<meta property="og:updated_time" content="2017-03-31T12:20:18.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小白爱折腾之hexo+GitHub搭建个人博客">
 <meta name="twitter:description" content="非教程帖，仅做挖坑记录和反思
@@ -309,7 +309,7 @@ scaffold">
 <li>申请GitHub账号</li>
 </ul>
 <h1>搭建步骤：</h1>
-<p>1 创建仓库：<a href="http://xn--eqr924avxo.github.io" target="_blank" rel="external">用户名.github.io</a></p>
+<p>1 创建仓库：<code>用户名.github.io</code></p>
 <p>2 在本地指定根目录输入命令（cmd或git）：hexo init 用户名.github,io
 结果： 生成“用户名.github,io”文件夹</p>
 <p><strong>文件结构树：</strong></p>
@@ -330,6 +330,13 @@ scaffold">
 <p>至此，初级搭建成功。</p>
 <p>本地预览： <code>hexo s</code>或<code>hexo server</code></p>
 <hr>
+<h1>参考：</h1>
+<ul>
+<li><a href="http://www.jianshu.com/p/380290deb8f0" target="_blank" rel="external">免费个人博客搭建详解</a></li>
+<li><a href="http://div.io/topic/1691" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
+<li><a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Yelee —— 简而不减 Hexo 双栏博客主题</a></li>
+</ul>
+<hr>
 <h1>进阶-写博客：</h1>
 <p>创建新文章： <code>hexo new &quot;文章标题&quot;</code> （存在source_posts目录中）</p>
 <p>创建草稿： <code>hexo new draft &quot;文章标题&quot;</code> （会在source文件夹中新建一个文件夹“_drafts”）
@@ -345,6 +352,14 @@ scaffold">
 <a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Yelee安装教程</a>。教程很详细，这里就不细述了b(￣▽￣)d</p>
 <p>趁着还有半小时断网，再试一个主题<a href="http://luuman.github.io/2015/12/27/Hexo/HexoTheme/" target="_blank" rel="external">Hexo 主题：SPFK</a></p>
 <p>最后本博客选择Yelee和SPFK两个主题混搭。主要用了SPFK的样式，但用了Yelee的一些配置。</p>
+<hr>
+<h1>进阶-更改设置</h1>
+<h2><strong>阅读全文设置</strong></h2>
+<p><a href="https://twiceyuan.com/2014/05/25/hexo%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0readmore%E6%A0%87%E8%AE%B0/" target="_blank" rel="external">Hexo自动添加ReadMore标记</a></p>
+<h2><strong>文章排序</strong></h2>
+<p><a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="external">解决Hexo置顶问题</a></p>
+<h2><strong>emoji表情</strong></h2>
+<p><a href="http://sumygg.com/2016/02/29/hexo-support-emoji/" target="_blank" rel="external">让Hexo支持emoji表情</a></p>
 <h2><strong>站点Swiftype搜索框</strong></h2>
 <ol>
 <li>
@@ -379,8 +394,6 @@ scaffold">
 </ol>
 <p>上面主要是实现本地搜索功能，修改样式看个人喜好，主要修改的样式文件是：<code>\themes\spfk\source\css\_partial\main.styl</code>
 小技巧：<code>Ctrl+F</code>调出查找栏，输入“search”，对包含有这个对象的文件进行相应的修改，耐力活 =_=</p>
-<h2><strong>阅读全文设置</strong></h2>
-<p><a href="https://twiceyuan.com/2014/05/25/hexo%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0readmore%E6%A0%87%E8%AE%B0/" target="_blank" rel="external">Hexo自动添加ReadMore标记</a></p>
 <hr>
 <h1>进阶-使用插件</h1>
 <h2><strong>使用七牛云</strong></h2>
@@ -401,13 +414,6 @@ scaffold">
 <p>执行<code>hexo qiniu s</code>同步上传</p>
 </li>
 </ol>
-<hr>
-<h1>参考：</h1>
-<ul>
-<li><a href="http://www.jianshu.com/p/380290deb8f0" target="_blank" rel="external">免费个人博客搭建详解</a></li>
-<li><a href="http://div.io/topic/1691" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
-<li><a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Yelee —— 简而不减 Hexo 双栏博客主题</a></li>
-</ul>
 <hr>
 <h1>遇到的问题：</h1>
 <ol>
@@ -430,7 +436,7 @@ scaffold">
 <li>
 <p>markdown表格？似乎没有被渲染成表格。</p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">|<span class="string"> column </span>|<span class="string"> column </span>|</div><div class="line">|<span class="string">--------</span>|<span class="string">--------</span>|</div><div class="line">|<span class="string">        </span>|<span class="string">        </span>|</div></pre></td></tr></table></figure>
-<p>因为被浏览器（Chrome）检测为不安全脚本了<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>因为被浏览器（Chrome）检测为不安全脚本了</p>
 </li>
 </ol>
 
@@ -445,7 +451,7 @@ scaffold">
         <p><span>本文标题:</span><a href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/">小白爱折腾之hexo+GitHub搭建个人博客</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
         <p><span>发布时间:</span>2017年03月08日 - 14时51分</p>
-        <p><span>最后更新:</span>2017年03月20日 - 20时41分</p>
+        <p><span>最后更新:</span>2017年03月31日 - 20时20分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/" title="小白爱折腾之hexo+GitHub搭建个人博客">http://ChunlLing.github.io.com/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/</a>
             <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -478,7 +484,7 @@ scaffold">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">前期准备：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">搭建步骤：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">进阶-写博客：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">进阶-更换主题：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.1.</span> <span class="toc-text">站点Swiftype搜索框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.</span> <span class="toc-text">阅读全文设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">进阶-使用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.1.</span> <span class="toc-text">使用七牛云</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">参考：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">7.</span> <span class="toc-text">遇到的问题：</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">前期准备：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">搭建步骤：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">参考：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">进阶-写博客：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">进阶-更换主题：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">进阶-更改设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">6.1.</span> <span class="toc-text">阅读全文设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">6.2.</span> <span class="toc-text">文章排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">6.3.</span> <span class="toc-text">emoji表情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">6.4.</span> <span class="toc-text">站点Swiftype搜索框</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">7.</span> <span class="toc-text">进阶-使用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">7.1.</span> <span class="toc-text">使用七牛云</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">8.</span> <span class="toc-text">遇到的问题：</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -522,26 +528,6 @@ scaffold">
 
 
 
-
-    
-      <div class="duoshuo" id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/" data-title="小白爱折腾之hexo+GitHub搭建个人博客" data-url="http://ChunlLing.github.io.com/2017/03/08/小白爱折腾之hexo-GitHub搭建个人博客/"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"chunlling"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = '/js/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-    <!-- 多说公共JS代码 end -->
-</div>
 
     
 
