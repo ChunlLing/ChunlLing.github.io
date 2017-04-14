@@ -9,31 +9,31 @@
       <content type="html"><![CDATA[<p>截取字符串的三个方法<code>substring()</code>，<code>slice()</code>和<code>split()</code>对比，<code>substr()</code>已废弃，不作考虑~</p>
 <h1>substring()： 返回字符串的一个子串</h1>
 <h2>概要</h2>
-<p>string.substring(from, to)
-*from *: 一个非负整数，指定要提取的子串的第一个字符在string中的位置
-*to *: 一个非负整数，比要提取的子串的最后一个字符的位置大1.如果省略这个参数，则返回的子串将持续到string的结尾
+<p>string.substring(from, to)<br>
+<em>from</em> : 一个非负整数，指定要提取的子串的第一个字符在string中的位置<br>
+<em>to</em> : 一个非负整数，比要提取的子串的最后一个字符的位置大1.如果省略这个参数，则返回的子串将持续到string的结尾<br>
 返回： 一个新的字符串，长度为to-from，内容为string的一个子串。新字符串的内容为string中从位置from到to-1的字符的副本</p>
 <h2>描述</h2>
-<p>如果from等于to，返回空字符串
-如果from比to大，先交换两个参数的值，然后返回它们之间的子串
-此方法不接受负参
+<p>如果from等于to，返回空字符串<br>
+如果from比to大，先交换两个参数的值，然后返回它们之间的子串<br>
+此方法不接受负参<br>
 不修改string</p>
 <hr>
 <h1>slice()： 提取一个子串</h1>
 <h2>概要</h2>
-<p>string.slice(start, end)
-*start *: 切片开始的索引。如果为负，将从该字符串的尾部开始计算，如-1代表最后一个字符，-2代表倒数第二个字符
-*end *: 紧跟着切片结尾的字符串索引。如果不指定，切片将包括从start到当前字符串结尾的所有字符；如果参数为负，将从该字符串的尾部开始计算
+<p>string.slice(start, end)<br>
+<em>start</em> : 切片开始的索引。如果为负，将从该字符串的尾部开始计算，如-1代表最后一个字符，-2代表倒数第二个字符<br>
+<em>end</em> : 紧跟着切片结尾的字符串索引。如果不指定，切片将包括从start到当前字符串结尾的所有字符；如果参数为负，将从该字符串的尾部开始计算<br>
 返回： 一个新的字符串，内容为string中自start位置开始并且包含start位置，直到但不包含end位置的所有字符</p>
 <h2>描述</h2>
-<p>返回一个字符串，内容为string中的一个切片或子串。
+<p>返回一个字符串，内容为string中的一个切片或子串。<br>
 不修改string</p>
 <hr>
 <h1>split(): 将一个字符串切分为一个由字符串组成的数组</h1>
 <h2>概要</h2>
-<p>string.split(delimiter, limit)
-*delimiter *: string切分处的字符串或正则表达式
-*limit *: 可选，整数，指定已返回数组的最大长度。如果指定，最多返回数量为这个数字的子串；如果没有指定，将切分整个字符串
+<p>string.split(delimiter, limit)<br>
+<em>delimiter</em> : string切分处的字符串或正则表达式<br>
+<em>limit</em> : 可选，整数，指定已返回数组的最大长度。如果指定，最多返回数量为这个数字的子串；如果没有指定，将切分整个字符串<br>
 返回： 一个由字符串组成的数组</p>
 <h2>描述</h2>
 <p>split()方法创建并返回一个数组，内容为至多limit个给定的字符串string的子串。子串创建的方式：从string()的开头搜索到结尾，在所有匹配delimiter的文本的前后方断开。分割文本不包含在返回的子串中。但当delimiter为带圆括号的正则表达式时可返回匹配圆括号内的子串（@.@见快捷测试）</p>
