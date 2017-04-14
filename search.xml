@@ -4,6 +4,46 @@
   
     
     <entry>
+      <title><![CDATA[LESS学习笔记]]></title>
+      <url>http://ChunlLing.github.io.com/2017/04/14/LESS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>前言：学而时习之不亦说乎<br>
+其实是以前做的笔记不见了重新写~😤</p>
+<h1>安装</h1>
+<h2>服务器端</h2>
+<p>通过npm（包管理器）安装</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> -g <span class="keyword">less</span></div></pre></td></tr></table></figure>
+<h2>客户端</h2>
+<p>在页面中引用</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet/less"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"文件.less"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"less.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>需要注意<code>&lt;link&gt;</code>的<code>rel</code>属性并且这个标签放在脚本文件之前，<a href="http://lesscss.org/?utm_source=caibaojian.com#download-options" target="_blank" rel="external"><code>less.js</code>下载</a></p>
+<h1>用法</h1>
+<h2>变量</h2>
+<p>变量定义： <code>@变量名 : 值;</code></p>
+<h2>混合</h2>
+<p>将一系列属性从一个规则集引入到另一个规则集中。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.border</span> &#123;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#id</span> &#123;</div><div class="line">	.<span class="attribute">border</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2>嵌套</h2>
+<p>可以在一个选择器中嵌套子选择器的样式。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#parent</span> &#123;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">    <span class="selector-id">#child</span> &#123;</div><div class="line">    	<span class="attribute">color</span>: <span class="number">#123</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-tag">a</span> &#123;</div><div class="line">    	&amp;:hover &#123;</div><div class="line">        	<span class="attribute">color</span>: <span class="number">#123</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注意，<code>&amp;</code>表示父选择器，上栗<code>&amp;:hover</code>等价于<code>a:hover</code></p>
+<h2>计算</h2>
+<p>任何数值、颜色和变量都可以计算。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@num:</span> <span class="number">10px</span></div><div class="line">#id &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="variable">@num</span> * <span class="number">10</span>;</div><div class="line">    <span class="attribute">height</span>: calc(<span class="variable">@num</span> + <span class="number">5px</span>);		<span class="comment">// calc()是css3中的属性，用于计算</span></div><div class="line">    <span class="attribute">padding</span>: <span class="string">~'calc(@num - 5px)'</span>	<span class="comment">// 不会在编译后的css文件中显示计算结果</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2>函数</h2>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> LESS </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[js字符串截取]]></title>
       <url>http://ChunlLing.github.io.com/2017/03/29/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96/</url>
       <content type="html"><![CDATA[<p>截取字符串的三个方法<code>substring()</code>，<code>slice()</code>和<code>split()</code>对比，<code>substr()</code>已废弃，不作考虑~</p>
