@@ -35,9 +35,9 @@
         
         <tags>
             
-            <tag> LESS </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> LESS </tag>
             
         </tags>
         
@@ -295,10 +295,28 @@
 只有一个值<code>undefined</code>。在使用<code>var</code>声明变量但没有对其初始化时，这个变量的值就是<code>undefined</code>
 对于未初始化的变量与未声明的变量，使用<code>typeof</code>操作符时都是返回<code>undefined</code>。从逻辑上而言，前者的值是<code>undefined</code>，而后者是<code>ReferenceError（引用错误）</code></li>
 </ul>
-<h2>对象类型（objext type）</h2>
+<h2>引用类型</h2>
 <ul>
-<li>Array</li>
 <li>Object</li>
+<li>Array
+<ul>
+<li>转换方法：<a href="http://www.w3school.com.cn/jsref/jsref_join.asp" target="_blank" rel="external">join()</a></li>
+<li>插入数据项：<a href="http://www.w3school.com.cn/jsref/jsref_push.asp" target="_blank" rel="external">push()</a> <a href="http://www.w3school.com.cn/jsref/jsref_pop.asp" target="_blank" rel="external">pop()</a> <a href="http://www.w3school.com.cn/jsref/jsref_shift.asp" target="_blank" rel="external">shift()</a> <a href="http://www.w3school.com.cn/jsref/jsref_unshift.asp" target="_blank" rel="external">unshift()</a></li>
+<li>重排序：<a href="http://www.w3school.com.cn/jsref/jsref_sort.asp" target="_blank" rel="external">sort()</a> <a href="http://www.w3school.com.cn/jsref/jsref_reverse.asp" target="_blank" rel="external">reverse()</a></li>
+<li>操作方法：<a href="http://www.w3school.com.cn/jsref/jsref_concat_array.asp" target="_blank" rel="external">concat()</a> <a href="http://www.w3school.com.cn/jsref/jsref_slice_array.asp" target="_blank" rel="external">slice()</a></li>
+<li>位置方法：<a href="http://www.w3school.com.cn/jsref/jsref_indexOf.asp" target="_blank" rel="external">indexOf()</a> <a href="http://www.w3school.com.cn/jsref/jsref_lastIndexOf.asp" target="_blank" rel="external">lastIndexOf()</a></li>
+<li>迭代方法：（假定下列方法的参数为function）
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every?v=example" target="_blank" rel="external">every()</a>：如果function每一项都返回true则返回true</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some?v=example" target="_blank" rel="external">some()</a>：如果function任一项返回true则返回true</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter?v=example" target="_blank" rel="external">filter()</a>：返回function返回true的项组成的数组</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?v=example" target="_blank" rel="external">forEach()</a>：没有返回值</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?v=example" target="_blank" rel="external">map()</a>：返回每次function调用的结果组成的数组</li>
+</ul>
+</li>
+<li>缩小方法：<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=example" target="_blank" rel="external">reduce()</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight?v=example" target="_blank" rel="external">reduceRight()</a></li>
+</ul>
+</li>
 </ul>
 <p>原始值是 <em>不可更改</em> 的；原始值得比较是 <em>值</em> 的比较。
 对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</p>

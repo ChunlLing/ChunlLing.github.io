@@ -38,7 +38,7 @@ Javascript区分大小写。
 
 ECMAScri">
 <meta property="og:image" content="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png">
-<meta property="og:updated_time" content="2017-03-31T15:38:05.808Z">
+<meta property="og:updated_time" content="2017-04-25T16:52:10.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础笔记">
 <meta name="twitter:description" content="学习资料来源：
@@ -359,10 +359,28 @@ ECMAScri">
 只有一个值<code>undefined</code>。在使用<code>var</code>声明变量但没有对其初始化时，这个变量的值就是<code>undefined</code>
 对于未初始化的变量与未声明的变量，使用<code>typeof</code>操作符时都是返回<code>undefined</code>。从逻辑上而言，前者的值是<code>undefined</code>，而后者是<code>ReferenceError（引用错误）</code></li>
 </ul>
-<h2>对象类型（objext type）</h2>
+<h2>引用类型</h2>
 <ul>
-<li>Array</li>
 <li>Object</li>
+<li>Array
+<ul>
+<li>转换方法：<a href="http://www.w3school.com.cn/jsref/jsref_join.asp" target="_blank" rel="external">join()</a></li>
+<li>插入数据项：<a href="http://www.w3school.com.cn/jsref/jsref_push.asp" target="_blank" rel="external">push()</a> <a href="http://www.w3school.com.cn/jsref/jsref_pop.asp" target="_blank" rel="external">pop()</a> <a href="http://www.w3school.com.cn/jsref/jsref_shift.asp" target="_blank" rel="external">shift()</a> <a href="http://www.w3school.com.cn/jsref/jsref_unshift.asp" target="_blank" rel="external">unshift()</a></li>
+<li>重排序：<a href="http://www.w3school.com.cn/jsref/jsref_sort.asp" target="_blank" rel="external">sort()</a> <a href="http://www.w3school.com.cn/jsref/jsref_reverse.asp" target="_blank" rel="external">reverse()</a></li>
+<li>操作方法：<a href="http://www.w3school.com.cn/jsref/jsref_concat_array.asp" target="_blank" rel="external">concat()</a> <a href="http://www.w3school.com.cn/jsref/jsref_slice_array.asp" target="_blank" rel="external">slice()</a></li>
+<li>位置方法：<a href="http://www.w3school.com.cn/jsref/jsref_indexOf.asp" target="_blank" rel="external">indexOf()</a> <a href="http://www.w3school.com.cn/jsref/jsref_lastIndexOf.asp" target="_blank" rel="external">lastIndexOf()</a></li>
+<li>迭代方法：（假定下列方法的参数为function）
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every?v=example" target="_blank" rel="external">every()</a>：如果function每一项都返回true则返回true</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some?v=example" target="_blank" rel="external">some()</a>：如果function任一项返回true则返回true</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter?v=example" target="_blank" rel="external">filter()</a>：返回function返回true的项组成的数组</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?v=example" target="_blank" rel="external">forEach()</a>：没有返回值</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?v=example" target="_blank" rel="external">map()</a>：返回每次function调用的结果组成的数组</li>
+</ul>
+</li>
+<li>缩小方法：<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=example" target="_blank" rel="external">reduce()</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight?v=example" target="_blank" rel="external">reduceRight()</a></li>
+</ul>
+</li>
 </ul>
 <p>原始值是 <em>不可更改</em> 的；原始值得比较是 <em>值</em> 的比较。
 对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</p>
@@ -390,7 +408,7 @@ ECMAScri">
         <p><span>本文标题:</span><a href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
         <p><span>发布时间:</span>2017年03月12日 - 01时04分</p>
-        <p><span>最后更新:</span>2017年03月31日 - 23时38分</p>
+        <p><span>最后更新:</span>2017年04月26日 - 00时52分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/12/Javascript基础笔记/" title="JavaScript基础笔记">http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/</a>
             <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -428,7 +446,7 @@ ECMAScri">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">原始类型（primitive type）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">对象类型（objext type）</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">原始类型（primitive type）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">引用类型</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
