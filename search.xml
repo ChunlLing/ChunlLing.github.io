@@ -241,7 +241,9 @@
 </ul>
 <p><a href="http://www.w3school.com.cn/js/pro_js_keywords.asp" target="_blank" rel="external">ECMAScript全部关键字</a></p>
 <p><a href="http://www.w3school.com.cn/js/pro_js_reservedwords.asp" target="_blank" rel="external">ECMA-262第三版全部保留字</a></p>
-<p>注释：<code>//</code>单行注释 | <code>/* */</code>多行注释</p>
+<p>注释：<br>
+<code>//</code>单行注释<br>
+<code>/* */</code>多行注释</p>
 <p>Javascript的每个语句以<code>;</code>结束，语句块用<code>{}</code>。
 虽然Javascript不强制使用<code>;</code>，不过始终补上<code>;</code>是一个良好的习惯。
 可选分号通用规则：如果当前语句和下一行语句无法合并解析，Javascrpt则在第一行后填补分号。
@@ -273,32 +275,75 @@
 <p>注意如果字符串不用<code>''</code>或<code>&quot;&quot;</code>包裹会抛出<code>ReferenceError（引用错误）</code>。</p>
 <h1>数据类型</h1>
 <h2>原始类型（primitive type）</h2>
-<ul>
-<li>Number
-包含两种数值：整数和浮点数。
-八进制数值字面量：前导为<code>0</code>
-十六进制数值字面量：前导为<code>0x</code>
-浮点类型数值包含一个小数点，且小数点后面必须至少有一位数字。由于保存浮点数值需要的内存空间比整数型数值大两倍，如果浮点数值小数点后没有数字或数字都为0会自动转化为整型。
-对于过大或过小的数值可以用科学表示法<code>e表示法</code>，用e表示该数值的前面数值的10的指数次幂。浮点数值的范围在：<code>Number.MIN_VALUE</code>到<code>Number.MAX_VALUE</code>之间。如果超过了浮点数值范围的最大值或最小值，则会出现<code>Infinity（正无穷）</code>或<code>-Infinity（负无穷）</code>。
-<code>isFinite()</code>函数可以确定一个数值是否超过了规定范围，没有超过返回<code>true</code>，超过返回<code>false</code>。
-<code>NaN</code>即Not a Number，用于表示一个本来要返回数值的操作数未返回数值的情况（这样就不回抛出错误）。<code>NaN</code>与任何值都不相等，包括它自身。
-判别一个字面量x是否为<code>NaN</code>有两种方式：<code>x != x</code> 或者 <code>isNaN(x)</code> 。注意，<code>isNaN(true)</code>会返回<code>false</code>，因为<code>true</code>会被转换为数字1。
-非数值转化为数值：<code>Number()</code>、<code>parseInt()</code>、<code>parseFloat()</code></li>
-<li>String
-用于表示由零或多个16位Unicode字符组成的字符串。</li>
-<li>Boolean
-有两个值：<code>true</code>和<code>false</code>。而<code>true</code>不一定等于1，<code>false</code>不一定等于0.由于JavaScript区分大小写，所以<code>TRUE</code>和<code>FALSE</code>或其他不是Boolean类型的值。
-其他类型转换成Boolean类型规则：<img src="http://ommn78ss1.bkt.clouddn.com/static/images/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2Boolean.png" alt="其他类型转换成Boolean类型规则"></li>
-<li>NULL
-只用一个值<code>null</code>。表示一个空对象引用（指针）。使用<code>typeof</code>操作符检测<code>null</code>会返回<code>object</code></li>
-<li>Undefined
-只有一个值<code>undefined</code>。在使用<code>var</code>声明变量但没有对其初始化时，这个变量的值就是<code>undefined</code>
-对于未初始化的变量与未声明的变量，使用<code>typeof</code>操作符时都是返回<code>undefined</code>。从逻辑上而言，前者的值是<code>undefined</code>，而后者是<code>ReferenceError（引用错误）</code></li>
-</ul>
+<h3>Number</h3>
+<p>包含两种数值：整数和浮点数。<br>
+八进制数值字面量：前导为<code>0</code><br>
+十六进制数值字面量：前导为<code>0x</code><br>
+浮点类型数值包含一个小数点，且小数点后面必须至少有一位数字。由于保存浮点数值需要的内存空间比整数型数值大两倍，如果浮点数值小数点后没有数字或数字都为0会自动转化为整型。<br>
+对于过大或过小的数值可以用科学表示法<code>e表示法</code>，用e表示该数值的前面数值的10的指数次幂。浮点数值的范围在：<code>Number.MIN_VALUE</code>到<code>Number.MAX_VALUE</code>之间。如果超过了浮点数值范围的最大值或最小值，则会出现<code>Infinity（正无穷）</code>或<code>-Infinity（负无穷）</code>。<br>
+<code>isFinite()</code>函数可以确定一个数值是否超过了规定范围，没有超过返回<code>true</code>，超过返回<code>false</code>。<br>
+<code>NaN</code>即Not a Number，用于表示一个本来要返回数值的操作数未返回数值的情况（这样就不回抛出错误）。<code>NaN</code>与任何值都不相等，包括它自身。<br>
+判别一个字面量x是否为<code>NaN</code>有两种方式：<code>x != x</code> 或者 <code>isNaN(x)</code> 。注意，<code>isNaN(true)</code>会返回<code>false</code>，因为<code>true</code>会被转换为数字1。<br>
+非数值转化为数值：<code>Number()</code>、<code>parseInt()</code>、<code>parseFloat()</code></p>
+<h3>String</h3>
+<p>用于表示由零或多个16位Unicode字符组成的字符串。</p>
+<h3>Boolean</h3>
+<p>有两个值：<code>true</code>和<code>false</code>。而<code>true</code>不一定等于1，<code>false</code>不一定等于0.由于JavaScript区分大小写，所以<code>TRUE</code>和<code>FALSE</code>或其他不是Boolean类型的值。<br>
+其他类型转换成Boolean类型规则：</p>
+  <table>
+  	<thead>
+    	<tr>
+        	<th>数据类型</th>
+        	<th>转换为true的值</th>
+        	<th>转换为false的值</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+        	<td>Boolean</td>
+        	<td>true</td>
+        	<td>false</td>
+        </tr>
+    	<tr>
+        	<td>String</td>
+        	<td>任何非空字符串</td>
+        	<td>空字符串</td>
+        </tr>
+    	<tr>
+        	<td>Number</td>
+        	<td>任何非零数字值（包括无穷大）</td>
+        	<td>0和NaN</td>
+        </tr>
+    	<tr>
+        	<td>Object</td>
+        	<td>任何对象</td>
+        	<td>null</td>
+        </tr>
+    	<tr>
+        	<td>Undefined</td>
+        	<td></td>
+        	<td>undefined</td>
+        </tr>
+    </tbody>
+  </table>
+<h3>NULL</h3>
+<p>只有一个值<code>null</code>。表示一个空对象引用（指针）。使用<code>typeof</code>操作符检测<code>null</code>会返回<code>object</code></p>
+<h3>Undefined</h3>
+<p>只有一个值<code>undefined</code>。在使用<code>var</code>声明变量但没有对其初始化时，这个变量的值就是<code>undefined</code><br>
+对于未初始化的变量与未声明的变量，使用<code>typeof</code>操作符时都是返回<code>undefined</code>。从逻辑上而言，前者的值是<code>undefined</code>，而后者是<code>ReferenceError（引用错误）</code></p>
 <h2>引用类型</h2>
-<ul>
-<li>Object</li>
-<li>Array
+<h3>Object</h3>
+<p>创建Object实例的方式：</p>
+<ol>
+<li><code>new Obiect()</code> 用new操作符后跟Object构造函数</li>
+<li><code>{}</code> 使用对象字面量表示法</li>
+</ol>
+<p>访问属性的方式：</p>
+<ol>
+<li><code>.</code>点表示法</li>
+<li><code>[]</code>方括号表示法</li>
+</ol>
+<h3>Array</h3>
 <ul>
 <li>转换方法：<a href="http://www.w3school.com.cn/jsref/jsref_join.asp" target="_blank" rel="external">join()</a></li>
 <li>插入数据项：<a href="http://www.w3school.com.cn/jsref/jsref_push.asp" target="_blank" rel="external">push()</a> <a href="http://www.w3school.com.cn/jsref/jsref_pop.asp" target="_blank" rel="external">pop()</a> <a href="http://www.w3school.com.cn/jsref/jsref_shift.asp" target="_blank" rel="external">shift()</a> <a href="http://www.w3school.com.cn/jsref/jsref_unshift.asp" target="_blank" rel="external">unshift()</a></li>
@@ -316,10 +361,12 @@
 </li>
 <li>缩小方法：<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=example" target="_blank" rel="external">reduce()</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight?v=example" target="_blank" rel="external">reduceRight()</a></li>
 </ul>
-</li>
-</ul>
-<p>原始值是 <em>不可更改</em> 的；原始值得比较是 <em>值</em> 的比较。
-对象值是 <em>可修改</em> 的；对象的比较是 <em>引用</em> 的比较。</p>
+<h3>Date</h3>
+<p>使用UTC（Coordinated Universal Time，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">// 自动获得当前日期和时间</span></div><div class="line"><span class="keyword">var</span> time = <span class="built_in">Date</span>.now();<span class="comment">// 返回表示调用这个方法时的日期和时间的毫秒数，应用：计时器？</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Date</span>.now() + <span class="string">' || '</span> + now.getTime()); <span class="comment">// 两个结果是一样的</span></div></pre></td></tr></table></figure>
+<hr>
+<p>原始值是 <strong>不可更改</strong> 的；原始值得比较是 <strong>值</strong> 的比较。<br>
+对象值是 <strong>可修改</strong> 的；对象的比较是 <strong>引用</strong> 的比较。</p>
 <p><strong>typeof</strong>操作符：用来检测变量的数据类型</p>
 <p>关于类型的几点规则：</p>
 <ul>
