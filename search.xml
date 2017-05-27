@@ -4,32 +4,100 @@
   
     
     <entry>
+      <title><![CDATA[HTML5学习笔记]]></title>
+      <url>http://ChunlLing.github.io.com/2017/05/27/HTML5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>新元素</p>
+<table>
+	<tr>
+    	<th>标签</th>
+        <th>描述</th>
+        <th>分类</th>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/html/html5-canvas.html" target="_blank" rel="external">&lt;canvas&gt;</a></td>
+        <td>定义图形，基于JavaScript的绘图API</td>
+        <td></td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/html/html5-audio.html" target="_blank" rel="external">&lt;audio&gt;</a></td>
+        <td>音频</td>
+        <td>多媒体</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/html/html5-video.html" target="_blank" rel="external">&lt;video&gt;</a></td>
+        <td>视频</td>
+        <td>多媒体</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-source.html" target="_blank" rel="external">&lt;source&gt;</a></td>
+        <td>定义多媒体资源&lt;audio&gt;和&lt;video&gt;</td>
+        <td>多媒体</td>
+    </tr>
+    <tr>
+    	<td><a href="http://www.runoob.com/tags/tag-embed.html" target="_blank" rel="external">&lt;embed&gt;</a></td>
+        <td>定于嵌入的内容</td>
+        <td>多媒体</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-track.html" target="_blank" rel="external">&lt;track&gt;</a></td>
+        <td>为诸如&lt;audio&gt;和&lt;video&gt;元素之类媒介规定外部文本轨道</td>
+        <td>多媒体</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-datalist.html" target="_blank" rel="external">&lt;datalist&gt;</a></td>
+        <td>定义选项列表。配合&lt;input&gt;使用</td>
+        <td>表单</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-keygen.html" target="_blank" rel="external">&lt;keygen&gt;</a></td>
+        <td>规定用于表单的密钥对生成器字段</td>
+        <td>表单</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-output.html" target="_blank" rel="external">&lt;output&gt;</a></td>
+        <td>定义不同类型的输出，如脚本的输出</td>
+        <td>表单</td>
+    </tr>
+</table>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[LESS学习笔记]]></title>
       <url>http://ChunlLing.github.io.com/2017/04/14/LESS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>前言：学而时习之不亦说乎<br>
 其实是以前做的笔记不见了重新写~😤</p>
-<h1>安装</h1>
-<h2>服务器端</h2>
+<h1 id="安装">安装</h1>
+<h2 id="服务器端">服务器端</h2>
 <p>通过npm（包管理器）安装</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> -g <span class="keyword">less</span></div></pre></td></tr></table></figure>
-<h2>客户端</h2>
+<h2 id="客户端">客户端</h2>
 <p>在页面中引用</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet/less"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"文件.less"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"less.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>需要注意<code>&lt;link&gt;</code>的<code>rel</code>属性并且这个标签放在脚本文件之前，<a href="http://lesscss.org/?utm_source=caibaojian.com#download-options" target="_blank" rel="external"><code>less.js</code>下载</a></p>
-<h1>用法</h1>
-<h2>变量</h2>
+<h1 id="用法">用法</h1>
+<h2 id="变量">变量</h2>
 <p>变量定义： <code>@变量名 : 值;</code></p>
-<h2>混合</h2>
+<h2 id="混合">混合</h2>
 <p>将一系列属性从一个规则集引入到另一个规则集中。</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.border</span> &#123;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#id</span> &#123;</div><div class="line">	.<span class="attribute">border</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2>嵌套</h2>
+<h2 id="嵌套">嵌套</h2>
 <p>可以在一个选择器中嵌套子选择器的样式。</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#parent</span> &#123;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">    <span class="selector-id">#child</span> &#123;</div><div class="line">    	<span class="attribute">color</span>: <span class="number">#123</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-tag">a</span> &#123;</div><div class="line">    	&amp;:hover &#123;</div><div class="line">        	<span class="attribute">color</span>: <span class="number">#123</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>注意，<code>&amp;</code>表示父选择器，上栗<code>&amp;:hover</code>等价于<code>a:hover</code></p>
-<h2>计算</h2>
+<h2 id="计算">计算</h2>
 <p>任何数值、颜色和变量都可以计算。</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@num:</span> <span class="number">10px</span></div><div class="line">#id &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="variable">@num</span> * <span class="number">10</span>;</div><div class="line">    <span class="attribute">height</span>: calc(<span class="variable">@num</span> + <span class="number">5px</span>);		<span class="comment">// calc()是css3中的属性，用于计算</span></div><div class="line">    <span class="attribute">padding</span>: <span class="string">~'calc(@num - 5px)'</span>	<span class="comment">// 不会在编译后的css文件中显示计算结果</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2>函数</h2>
+<h2 id="函数">函数</h2>
 ]]></content>
       
         
@@ -47,35 +115,35 @@
       <title><![CDATA[js字符串截取]]></title>
       <url>http://ChunlLing.github.io.com/2017/03/29/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96/</url>
       <content type="html"><![CDATA[<p>截取字符串的三个方法<code>substring()</code>，<code>slice()</code>和<code>split()</code>对比，<code>substr()</code>已废弃，不作考虑~</p>
-<h1>substring()： 返回字符串的一个子串</h1>
-<h2>概要</h2>
+<h1 id="substring-返回字符串的一个子串">substring()： 返回字符串的一个子串</h1>
+<h2 id="概要">概要</h2>
 <p>string.substring(from, to)<br>
 <em>from</em> : 一个非负整数，指定要提取的子串的第一个字符在string中的位置<br>
 <em>to</em> : 一个非负整数，比要提取的子串的最后一个字符的位置大1.如果省略这个参数，则返回的子串将持续到string的结尾<br>
 返回： 一个新的字符串，长度为to-from，内容为string的一个子串。新字符串的内容为string中从位置from到to-1的字符的副本</p>
-<h2>描述</h2>
+<h2 id="描述">描述</h2>
 <p>如果from等于to，返回空字符串<br>
 如果from比to大，先交换两个参数的值，然后返回它们之间的子串<br>
 此方法不接受负参<br>
 不修改string</p>
 <hr>
-<h1>slice()： 提取一个子串</h1>
-<h2>概要</h2>
+<h1 id="slice-提取一个子串">slice()： 提取一个子串</h1>
+<h2 id="概要">概要</h2>
 <p>string.slice(start, end)<br>
 <em>start</em> : 切片开始的索引。如果为负，将从该字符串的尾部开始计算，如-1代表最后一个字符，-2代表倒数第二个字符<br>
 <em>end</em> : 紧跟着切片结尾的字符串索引。如果不指定，切片将包括从start到当前字符串结尾的所有字符；如果参数为负，将从该字符串的尾部开始计算<br>
 返回： 一个新的字符串，内容为string中自start位置开始并且包含start位置，直到但不包含end位置的所有字符</p>
-<h2>描述</h2>
+<h2 id="描述">描述</h2>
 <p>返回一个字符串，内容为string中的一个切片或子串。<br>
 不修改string</p>
 <hr>
-<h1>split(): 将一个字符串切分为一个由字符串组成的数组</h1>
-<h2>概要</h2>
+<h1 id="split-将一个字符串切分为一个由字符串组成的数组">split(): 将一个字符串切分为一个由字符串组成的数组</h1>
+<h2 id="概要">概要</h2>
 <p>string.split(delimiter, limit)<br>
 <em>delimiter</em> : string切分处的字符串或正则表达式<br>
 <em>limit</em> : 可选，整数，指定已返回数组的最大长度。如果指定，最多返回数量为这个数字的子串；如果没有指定，将切分整个字符串<br>
 返回： 一个由字符串组成的数组</p>
-<h2>描述</h2>
+<h2 id="描述">描述</h2>
 <p>split()方法创建并返回一个数组，内容为至多limit个给定的字符串string的子串。子串创建的方式：从string()的开头搜索到结尾，在所有匹配delimiter的文本的前后方断开。分割文本不包含在返回的子串中。但当delimiter为带圆括号的正则表达式时可返回匹配圆括号内的子串（@.@见快捷测试）</p>
 <hr>
 <p>快捷测试</p>
@@ -231,7 +299,7 @@
 <a href="https://book.douban.com/subject/10546125/" target="_blank" rel="external">JavaScript高级程序设计</a><br>
 <a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">廖雪峰–JavaScript全栈教程</a><br>
 <a href="http://study.163.com/course/introduction/252008.htm#/courseDetail" target="_blank" rel="external">李炎恢JavaScript教程 第一季</a></p>
-<h1>基本语法</h1>
+<h1 id="基本语法">基本语法</h1>
 <p>Javascript区分大小写。</p>
 <p>标识符命名规则：</p>
 <ul>
@@ -273,9 +341,9 @@
 <p>字符串也可以视为完整的语句</p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello World!"</span><span class="comment">;</span></div></pre></td></tr></table></figure>
 <p>注意如果字符串不用<code>''</code>或<code>&quot;&quot;</code>包裹会抛出<code>ReferenceError（引用错误）</code>。</p>
-<h1>数据类型</h1>
-<h2>原始类型（primitive type）</h2>
-<h3>Number</h3>
+<h1 id="数据类型">数据类型</h1>
+<h2 id="原始类型primitive-type">原始类型（primitive type）</h2>
+<h3 id="number">Number</h3>
 <p>包含两种数值：整数和浮点数。<br>
 八进制数值字面量：前导为<code>0</code><br>
 十六进制数值字面量：前导为<code>0x</code><br>
@@ -285,9 +353,9 @@
 <code>NaN</code>即Not a Number，用于表示一个本来要返回数值的操作数未返回数值的情况（这样就不回抛出错误）。<code>NaN</code>与任何值都不相等，包括它自身。<br>
 判别一个字面量x是否为<code>NaN</code>有两种方式：<code>x != x</code> 或者 <code>isNaN(x)</code> 。注意，<code>isNaN(true)</code>会返回<code>false</code>，因为<code>true</code>会被转换为数字1。<br>
 非数值转化为数值：<code>Number()</code>、<code>parseInt()</code>、<code>parseFloat()</code></p>
-<h3>String</h3>
+<h3 id="string">String</h3>
 <p>用于表示由零或多个16位Unicode字符组成的字符串。</p>
-<h3>Boolean</h3>
+<h3 id="boolean">Boolean</h3>
 <p>有两个值：<code>true</code>和<code>false</code>。而<code>true</code>不一定等于1，<code>false</code>不一定等于0.由于JavaScript区分大小写，所以<code>TRUE</code>和<code>FALSE</code>或其他不是Boolean类型的值。<br>
 其他类型转换成Boolean类型规则：</p>
   <table>
@@ -326,13 +394,13 @@
         </tr>
     </tbody>
   </table>
-<h3>NULL</h3>
+<h3 id="null">NULL</h3>
 <p>只有一个值<code>null</code>。表示一个空对象引用（指针）。使用<code>typeof</code>操作符检测<code>null</code>会返回<code>object</code></p>
-<h3>Undefined</h3>
+<h3 id="undefined">Undefined</h3>
 <p>只有一个值<code>undefined</code>。在使用<code>var</code>声明变量但没有对其初始化时，这个变量的值就是<code>undefined</code><br>
 对于未初始化的变量与未声明的变量，使用<code>typeof</code>操作符时都是返回<code>undefined</code>。从逻辑上而言，前者的值是<code>undefined</code>，而后者是<code>ReferenceError（引用错误）</code></p>
-<h2>引用类型</h2>
-<h3>Object</h3>
+<h2 id="引用类型">引用类型</h2>
+<h3 id="object">Object</h3>
 <p>创建Object实例的方式：</p>
 <ol>
 <li><code>new Obiect()</code> 用new操作符后跟Object构造函数</li>
@@ -343,7 +411,7 @@
 <li><code>.</code>点表示法</li>
 <li><code>[]</code>方括号表示法</li>
 </ol>
-<h3>Array</h3>
+<h3 id="array">Array</h3>
 <ul>
 <li>转换方法：<a href="http://www.w3school.com.cn/jsref/jsref_join.asp" target="_blank" rel="external">join()</a></li>
 <li>插入数据项：<a href="http://www.w3school.com.cn/jsref/jsref_push.asp" target="_blank" rel="external">push()</a> <a href="http://www.w3school.com.cn/jsref/jsref_pop.asp" target="_blank" rel="external">pop()</a> <a href="http://www.w3school.com.cn/jsref/jsref_shift.asp" target="_blank" rel="external">shift()</a> <a href="http://www.w3school.com.cn/jsref/jsref_unshift.asp" target="_blank" rel="external">unshift()</a></li>
@@ -361,9 +429,40 @@
 </li>
 <li>缩小方法：<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=example" target="_blank" rel="external">reduce()</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight?v=example" target="_blank" rel="external">reduceRight()</a></li>
 </ul>
-<h3>Date</h3>
+<h3 id="date">Date</h3>
 <p>使用UTC（Coordinated Universal Time，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">// 自动获得当前日期和时间</span></div><div class="line"><span class="keyword">var</span> time = <span class="built_in">Date</span>.now();<span class="comment">// 返回表示调用这个方法时的日期和时间的毫秒数，应用：计时器？</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Date</span>.now() + <span class="string">' || '</span> + now.getTime()); <span class="comment">// 两个结果是一样的</span></div></pre></td></tr></table></figure>
+<h3 id="regexp">RegExp</h3>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var expression</span> = /pattern/flags;</div></pre></td></tr></table></figure>
+<p>pattern：可以是任何简单或复杂的正则表达式，可以包含字符类、限定符、分组、先前查找以及反向引用。每个正则表达式都可带有一或多个标志（flags），用以标明正则表达式的行为。<br>
+flags：有以下3个标志</p>
+<ul>
+<li>g：全局模式，即模式被应用于所有字符串，而非在第一个匹配项时立即停止。</li>
+<li>i：表示不区分大小写。</li>
+<li>m：多行模式。即在到达一行文本末尾时还会继续查找下一行中是否存在与模式匹配的项。</li>
+</ul>
+<h3 id="function">Function</h3>
+<p>两种定义方式：</p>
+<ol>
+<li>function foo() {}</li>
+<li>var foo = function () {};</li>
+</ol>
+<p>两者的区别：在调用函数时第一种方式可写在调用语句之后，而第二种方式必须写在调用之前。<br>
+函数内部属性：</p>
+<ul>
+<li><code>arguments</code>：保存函数参数<br>
+arguments有一个<code>callee</code>属性，指向拥有这个arguments对象的函数。</li>
+</ul>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// 下面两种方式等价，但第二种更优，降低耦合度</div><div class="line">function <span class="built_in">factorial</span>(<span class="built_in">num</span>) &#123;</div><div class="line">  <span class="keyword">if</span> (<span class="built_in">num</span> &lt;= <span class="number">1</span>) &#123;</div><div class="line">    <span class="built_in">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">return</span> <span class="built_in">num</span> * <span class="built_in">factorial</span>(nume-<span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">function <span class="built_in">factorial</span>(<span class="built_in">num</span>) &#123;</div><div class="line">  <span class="keyword">if</span> (<span class="built_in">num</span> &lt;= <span class="number">1</span>) &#123;</div><div class="line">    <span class="built_in">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">return</span> <span class="built_in">num</span> * arguments.callee(nume-<span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>this</code>：函数执行的环境对象</li>
+<li><code>caller</code>：保存调用当前函数的函数的引用</li>
+<li><code>length</code>：表示函数希望接收的命名参数的个数</li>
+<li><code>prototype</code></li>
+<li><code>apply</code></li>
+<li><code>call</code></li>
+<li><code>bind</code></li>
+</ul>
 <hr>
 <p>原始值是 <strong>不可更改</strong> 的；原始值得比较是 <strong>值</strong> 的比较。<br>
 对象值是 <strong>可修改</strong> 的；对象的比较是 <strong>引用</strong> 的比较。</p>
@@ -424,14 +523,14 @@
       <title><![CDATA[小白爱折腾之hexo+GitHub搭建个人博客]]></title>
       <url>http://ChunlLing.github.io.com/2017/03/08/%E5%B0%8F%E7%99%BD%E7%88%B1%E6%8A%98%E8%85%BE%E4%B9%8Bhexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
       <content type="html"><![CDATA[<p>非教程帖，仅做挖坑记录和反思</p>
-<h1>前期准备：</h1>
+<h1 id="前期准备">前期准备：</h1>
 <ul>
 <li>安装git</li>
 <li>安装node.js</li>
 <li>安装hexo</li>
 <li>申请GitHub账号</li>
 </ul>
-<h1>搭建步骤：</h1>
+<h1 id="搭建步骤">搭建步骤：</h1>
 <p>1 创建仓库：<code>用户名.github.io</code></p>
 <p>2 在本地指定根目录输入命令（cmd或git）：hexo init 用户名.github,io
 结果： 生成“用户名.github,io”文件夹</p>
@@ -453,14 +552,14 @@
 <p>至此，初级搭建成功。</p>
 <p>本地预览： <code>hexo s</code>或<code>hexo server</code></p>
 <hr>
-<h1>参考：</h1>
+<h1 id="参考">参考：</h1>
 <ul>
 <li><a href="http://www.jianshu.com/p/380290deb8f0" target="_blank" rel="external">免费个人博客搭建详解</a></li>
 <li><a href="http://div.io/topic/1691" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
 <li><a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Yelee —— 简而不减 Hexo 双栏博客主题</a></li>
 </ul>
 <hr>
-<h1>进阶-写博客：</h1>
+<h1 id="进阶-写博客">进阶-写博客：</h1>
 <p>创建新文章： <code>hexo new &quot;文章标题&quot;</code> （存在source_posts目录中）</p>
 <p>创建草稿： <code>hexo new draft &quot;文章标题&quot;</code> （会在source文件夹中新建一个文件夹“_drafts”）
 发布草稿： <code>hexo publish &quot;文章标题&quot;</code> （会将存在source_drafts的草稿发布到&quot;_posts&quot;文件夹中）</p>
@@ -470,20 +569,20 @@
 生成静态文件：<code>hexo generate</code>或<code>hexo g</code>
 部署到git上：<code>hexo deploy</code>或<code>hexo d</code></p>
 <hr>
-<h1>进阶-更换主题：</h1>
+<h1 id="进阶-更换主题">进阶-更换主题：</h1>
 <p>到<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo</a>选择喜欢的主题。这里选了<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">Yelee</a>这个主题。
 <a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Yelee安装教程</a>。教程很详细，这里就不细述了b(￣▽￣)d</p>
 <p>趁着还有半小时断网，再试一个主题<a href="http://luuman.github.io/2015/12/27/Hexo/HexoTheme/" target="_blank" rel="external">Hexo 主题：SPFK</a></p>
 <p>最后本博客选择Yelee和SPFK两个主题混搭。主要用了SPFK的样式，但用了Yelee的一些配置。</p>
 <hr>
-<h1>进阶-更改设置</h1>
-<h2><strong>阅读全文设置</strong></h2>
+<h1 id="进阶-更改设置">进阶-更改设置</h1>
+<h2 id="阅读全文设置"><strong>阅读全文设置</strong></h2>
 <p><a href="https://twiceyuan.com/2014/05/25/hexo%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0readmore%E6%A0%87%E8%AE%B0/" target="_blank" rel="external">Hexo自动添加ReadMore标记</a></p>
-<h2><strong>文章排序</strong></h2>
+<h2 id="文章排序"><strong>文章排序</strong></h2>
 <p><a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="external">解决Hexo置顶问题</a></p>
-<h2><strong>emoji表情</strong></h2>
+<h2 id="emoji表情"><strong>emoji表情</strong></h2>
 <p><a href="http://sumygg.com/2016/02/29/hexo-support-emoji/" target="_blank" rel="external">让Hexo支持emoji表情</a></p>
-<h2><strong>站点Swiftype搜索框</strong></h2>
+<h2 id="站点swiftype搜索框"><strong>站点Swiftype搜索框</strong></h2>
 <ol>
 <li>
 <p>目标文件：<code>\themes\spfk\source\css\_partial</code>
@@ -518,8 +617,8 @@
 <p>上面主要是实现本地搜索功能，修改样式看个人喜好，主要修改的样式文件是：<code>\themes\spfk\source\css\_partial\main.styl</code>
 小技巧：<code>Ctrl+F</code>调出查找栏，输入“search”，对包含有这个对象的文件进行相应的修改，耐力活 =_=</p>
 <hr>
-<h1>进阶-使用插件</h1>
-<h2><strong>使用七牛云</strong></h2>
+<h1 id="进阶-使用插件">进阶-使用插件</h1>
+<h2 id="使用七牛云"><strong>使用七牛云</strong></h2>
 <ol>
 <li>
 <p>注册<a href="https://www.qiniu.com/" target="_blank" rel="external">七牛</a>云账号。注册完成后添加对象存储，记住空间名称，后面要用到</p>
@@ -538,7 +637,7 @@
 </li>
 </ol>
 <hr>
-<h1>遇到的问题：</h1>
+<h1 id="遇到的问题">遇到的问题：</h1>
 <ol>
 <li>
 <p>使用hexo d之后直接输入<code>https://用户名.github.io</code>显示404
