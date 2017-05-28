@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[HTML5学习笔记]]></title>
       <url>http://ChunlLing.github.io.com/2017/05/27/HTML5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<p>新元素</p>
+      <content type="html"><![CDATA[<h1 id="新元素">新元素</h1>
 <table>
 	<tr>
     	<th>标签</th>
@@ -58,14 +58,222 @@
         <td>定义不同类型的输出，如脚本的输出</td>
         <td>表单</td>
     </tr>
-</table>]]></content>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-article.html" target="_blank" rel="external">&lt;article&gt;</a></td>
+        <td>定义页面独立的内容区域</td>
+        <td></td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-details.html" target="_blank" rel="external">&lt;details&gt;</a></td>
+        <td>用于描述文档或文档某个部分的细节</td>
+        <td>与 &lt;summary&gt; 标签配合使用可以为 details 定义标题。标题是可见的，用户点击标题时，会显示出 details</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-summary.html" target="_blank" rel="external">&lt;summary&gt;</a></td>
+        <td>标签包含 details 元素的标题</td>
+        <td>&lt;summary&gt; 元素应该是 &lt;details&gt; 元素的第一个子元素</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-figure.html" target="_blank" rel="external">&lt;figure&gt;</a></td>
+        <td>规定独立的流内容（图像、图表、照片、代码等等）</td>
+        <td>.</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-figcaption.html" target="_blank" rel="external">&lt;figcaption&gt;</a></td>
+        <td>定义 &lt;figure&gt; 元素的标题</td>
+        <td>.</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-header.html" target="_blank" rel="external">&lt;header&gt;</a></td>
+        <td>定义了文档的头部区域</td>
+        <td>.</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-footer.html" target="_blank" rel="external">&lt;footer&gt;</a></td>
+        <td>定义 section 或 document 的页脚</td>
+        <td>.</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-nav.html" target="_blank" rel="external">&lt;nav&gt;</a></td>
+        <td>定义导航链接的部分</td>
+        <td>.</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-section.html" target="_blank" rel="external">&lt;section&gt;</a></td>
+        <td>定义文档中的节</td>
+        <td>.</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-progress.html" target="_blank" rel="external">&lt;progress&gt;</a></td>
+        <td>定义任何类型的任务的进度</td>
+        <td>.</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-meter.html" target="_blank" rel="external">&lt;meter&gt;</a></td>
+        <td>定义度量衡。仅用于已知最大和最小值的度量</td>
+        <td>.</td>
+    </tr>
+	<tr>
+    	<td><a href="http://www.runoob.com/tags/tag-mark.html" target="_blank" rel="external">&lt;mark&gt;</a></td>
+        <td>定义带有记号的文本</td>
+        <td>.</td>
+    </tr>
+</table>
+<h1 id="关于表单">关于表单</h1>
+<h2 id="lt-inputgt新类型">&lt; input&gt;新类型</h2>
+<table>
+	<tr>
+    	<th>类型</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+    	<td>email</td>
+        <td>定义用于 e-mail 地址的文本字段</td>
+    </tr>
+    <tr>
+    	<td>url</td>
+        <td>定义用于 URL 的文本字段</td>
+    </tr>
+    <tr>
+    	<td>tel</td>
+        <td>定义用于电话号码的文本字段</td>
+    </tr>
+    <tr>
+    	<td>number</td>
+        <td>定义带有 spinner 控件的数字字段</td>
+    </tr>
+    <tr>
+    	<td>range</td>
+        <td>定义带有 slider 控件的数字字段</td>
+    </tr>
+    <tr>
+    	<td>date</td>
+        <td>定义日期字段</td>
+    </tr>
+    <tr>
+    	<td>color</td>
+        <td>定义拾色器</td>
+    </tr>
+</table>
+<h2 id="表单新属性">表单新属性</h2>
+<table>
+	<tr>
+    	<th>属性</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+    	<td>placeholder</td>
+        <td>提供可描述输入字段预期值的提示信息</td>
+    </tr>
+    <tr>
+    	<td>multiple</td>
+        <td>输入字段可选择多个值</td>
+    </tr>
+    <tr>
+    	<td>autofocus</td>
+        <td>规定当页面加载时 input 元素应该自动获得焦点</td>
+    </tr>
+    <tr>
+    	<td>form</td>
+        <td>声明元素属于某个表单（该元素的html可不在表单内），属性值为表单id</td>
+    </tr>
+    <tr>
+    	<td>pattern</td>
+        <td>用于验证输入字段的模式</td>
+    </tr>
+    <tr>
+    	<td>min</td>
+        <td>规定输入域允许的最小值</td>
+    </tr>
+    <tr>
+    	<td>max</td>
+        <td>规定输入域允许的最大值</td>
+    </tr>
+    <tr>
+    	<td>step</td>
+        <td>输入域规定合法的数字间隔</td>
+    </tr>
+    <tr>
+    	<td>maxlength</td>
+        <td>规定输入域允许的最大长度</td>
+    </tr>
+    <tr>
+    	<td>mrequired</td>
+        <td>规定输入域必填</td>
+    </tr>
+    <tr>
+    	<td>list</td>
+        <td>配合&lt;datalist&gt;使用，设置在&lt;input&gt;元素上，属性值为指定&lt;datalist&gt;的id</td>
+    </tr>
+</table>
+<h2 id="表单验证api">表单验证API</h2>
+<ol>
+<li>获取表单DOM对象</li>
+<li>通过1获得的对象的<code>validity</code>属性获得<code>validityState</code>对象</li>
+</ol>
+<p><code>validityState</code>对象对象有以下属性</p>
+<ul>
+<li><code>valid</code>：值为true表示表单控件通过了所有验证约束条件</li>
+<li><code>valueMissind</code>：验证是否填写该字段，表单元素需设置<code>required</code></li>
+<li><code>typeMismatch</code>：验证填写内容是否与表单元素的<code>type</code>属性一致</li>
+<li><code>patternMismatch</code>：验证填写内容是否与表单元素的<code>pattern</code>属性一致</li>
+<li><code>tooLong</code>：验证填写内容是否与表单元素的<code>maxLength</code>属性一致</li>
+<li><code>rangeUnderflow</code>：验证填写内容是否与表单元素的<code>min</code>属性一致</li>
+<li><code>rangeOverflow</code>：验证填写内容是否与表单元素的<code>max</code>属性一致</li>
+<li><code>stepMismatch</code>：验证填写内容是否与表单元素的<code>step</code>属性符合</li>
+<li><code>customError</code>：自定义验证消息。通过<code>setCustomValidity()</code>设置错误提示信息，值为true</li>
+</ul>
+<h1 id="音视频">音视频</h1>
+<h2 id="视频元素lt-videogt">视频元素&lt; video&gt;</h2>
+<h3 id="使用">使用</h3>
+<p>有两种方式，推荐第二种</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"视频路径"</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">video</span>&gt;</span></div><div class="line">   	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"视频路径"</span> /&gt;</span></div><div class="line">   	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"视频路径"</span> /&gt;</span></div><div class="line">   	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"视频路径"</span> /&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">video</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="属性">属性</h3>
+<ul>
+<li><code>src</code>：属性值为视频路径</li>
+<li><code>autoplay</code>：是否自动播放</li>
+<li><code>cntrols</code>：是否显示控件</li>
+<li><code>loop</code>：是否循环播放</li>
+<li><code>poster</code>：指定在用户点击播放按钮前显示的图像</li>
+<li><code>width</code>/<code>height</code>：视频显示的尺寸</li>
+<li><code>preload</code>：设置是否预加载</li>
+</ul>
+<h3 id="api">API</h3>
+<h4 id="方法">方法</h4>
+<ul>
+<li>play()：播放视频</li>
+<li>pause()：暂停视频</li>
+<li>load()：加载视频</li>
+<li>canPlayType(type)：是否能播放type指定格式的视频</li>
+</ul>
+<h4 id="事件">事件</h4>
+<ul>
+<li>play：当视频播放时触发</li>
+<li>pause：当视频暂停时触发</li>
+<li>ended：当视频结束时触发</li>
+<li>error：当视频错误时触发</li>
+<li>canplay：不考虑整体情况下只要能播放视频就播放</li>
+<li>canplaythrough：考虑整体情况下只要能播放视频就播放</li>
+</ul>
+<h4 id="属性">属性</h4>
+<ul>
+<li>src：获取或设置视频路径</li>
+<li>played：读取媒体文件的已播放部分的时间段</li>
+<li>paused：获取或设置是否暂停</li>
+<li>ended：获取或设置是否结束</li>
+<li>currentTime：获取或设置播放位置</li>
+<li>duration：视频时长</li>
+<li>progress：表示视频加载的进度</li>
+</ul>
+]]></content>
       
         
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
         
@@ -483,9 +691,9 @@ arguments有一个<code>callee</code>属性，指向拥有这个arguments对象�
         
         <tags>
             
-            <tag> JS </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> JS </tag>
             
         </tags>
         
