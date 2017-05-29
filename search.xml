@@ -119,6 +119,7 @@
         <td>.</td>
     </tr>
 </table>
+<hr>
 <h1 id="关于表单">关于表单</h1>
 <h2 id="lt-inputgt新类型">&lt; input&gt;新类型</h2>
 <table>
@@ -223,6 +224,7 @@
 <li><code>stepMismatch</code>：验证填写内容是否与表单元素的<code>step</code>属性符合</li>
 <li><code>customError</code>：自定义验证消息。通过<code>setCustomValidity()</code>设置错误提示信息，值为true</li>
 </ul>
+<hr>
 <h1 id="音视频">音视频</h1>
 <h2 id="视频元素lt-videogt">视频元素&lt; video&gt;</h2>
 <h3 id="使用">使用</h3>
@@ -266,14 +268,143 @@
 <li>duration：视频时长</li>
 <li>progress：表示视频加载的进度</li>
 </ul>
+<hr>
+<h1 id="画布">画布</h1>
+<h2 id="使用">使用</h2>
+<ol>
+<li>在HTML中定义&lt;canvas&gt;</li>
+<li>在JS脚本中获取&lt;canvas&gt;DOM对象</li>
+<li>创建画布对象－－－getContext(‘2d’)</li>
+<li>使用画布API绘图</li>
+</ol>
+<h2 id="绘图api">绘图API</h2>
+<h3 id="设置">设置</h3>
+<ul>
+<li>fillStyle：设置填充色</li>
+<li>strokeStyle：设置描边色</li>
+<li>globalAlpha：设置透明度，值在0-1之间</li>
+<li>设置渐变
+<ul>
+<li>createLinearGradient(x1, y1, x2, y2)：线性渐变</li>
+<li>createRadiaGradient(x1, y1, r1, x2, y2, r2)：扇形渐变</li>
+<li>addColorStop(point, color)：渐变点颜色</li>
+</ul>
+</li>
+</ul>
+<h3 id="绘图">绘图</h3>
+<ul>
+<li>fillRect(x, y, width, height)：实心矩形</li>
+<li>strokeRect(x, y, width, height)：描边矩形</li>
+<li>clearRect(x, y, width, height)： 清除指定区域</li>
+</ul>
+<h3 id="文字">文字</h3>
+<ul>
+<li>fillText(text, x, y)：实心文字</li>
+<li>strokeText(text, x, y)：描边文字</li>
+<li>textAlign：设置文字的水平方向对齐</li>
+<li>textBaseline：设置文字的垂直方向对齐</li>
+<li>阴影效果
+<ul>
+<li>shadowColor：设置阴影颜色</li>
+<li>shadowOffsetX：设置水平方向阴影</li>
+<li>shadowOffsetY：设置垂直方向阴影</li>
+<li>shadowBlur：设置阴影模糊程度</li>
+</ul>
+</li>
+</ul>
+<h3 id="路径">路径</h3>
+<ul>
+<li>beginPath()：标志开始创建路径</li>
+<li>closePath()：标志结束创建路径</li>
+<li>rect(x, y, width, height)：设置矩形形状</li>
+<li>arc(x, y, radius, startAngle, endAngle, direction)：设置圆形形状</li>
+<li>绘制线条
+<ul>
+<li>moveTo(x, y)：线条起点</li>
+<li>lineTo(x, y)：线条终点/折点</li>
+<li>lineCap：设置线条端点的形状</li>
+<li>lineJoin：设置两条线交点的形状</li>
+<li>miterLimit：配合lineJoin使用</li>
+</ul>
+</li>
+<li>fill()：绘制填充</li>
+<li>stroke()：绘制描边</li>
+<li>clip()：切割画布</li>
+<li>绘制图片
+<ol>
+<li>
+<p>加载图片</p>
+ <figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> <span class="type">Image</span>();</div><div class="line">img.src = <span class="string">'图片路径'</span>;</div></pre></td></tr></table></figure>
+</li>
+<li>
+<p>绘制图片。需保证图片已加载完毕才能进行绘图操作</p>
+ <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">img.onload = function () &#123;</div><div class="line">	画布对象.drawImage(img, x, y)<span class="comment">;</span></div><div class="line">    画布对象.drawImage(img, x, y, width, height)<span class="comment">;</span></div><div class="line">    </div><div class="line">    var ptn = 画布对象.createPattern(img. type)<span class="comment">;</span></div><div class="line">    画布对象. fillStyle = ptn<span class="comment">;</span></div><div class="line">    </div><div class="line">    ...</div><div class="line">&#125;<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="画布方法">画布方法</h3>
+<ul>
+<li>scale(x, y)：缩放</li>
+<li>translate(x, y)：重新定位</li>
+<li>rotate(angle)：旋转画布。注意，效果是画布内容发生旋转而不是画布，所以视觉效果为画布内容发生相反方向的旋转</li>
+</ul>
+<h2 id="扩展-关于svg">扩展 关于SVG</h2>
+<h3 id="图形">图形</h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">""</span> <span class="attr">y</span>=<span class="string">""</span> <span class="attr">width</span>=<span class="string">""</span> <span class="attr">height</span>=<span class="string">""</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">""</span> <span class="attr">cy</span>=<span class="string">""</span> <span class="attr">r</span>=<span class="string">""</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">""</span> <span class="attr">cy</span>=<span class="string">""</span> <span class="attr">rx</span>=<span class="string">""</span> <span class="attr">ry</span>=<span class="string">""</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">""</span> <span class="attr">y1</span>=<span class="string">""</span> <span class="attr">x2</span>=<span class="string">""</span> <span class="attr">y2</span>=<span class="string">""</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">polyline</span> <span class="attr">points</span>=<span class="string">"x1,y1 x2,y2 ..."</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">polygon</span> <span class="attr">points</span>=<span class="string">"x1,y1 x2,y2 ..."</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="渐变">渐变</h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">defs</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">linearGradient</span> <span class="attr">x1</span>=<span class="string">""</span> <span class="attr">y1</span>=<span class="string">""</span> <span class="attr">x2</span>=<span class="string">""</span> <span class="attr">y2</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">stop</span> <span class="attr">offset</span>=<span class="string">""</span> <span class="attr">stop-color</span>=<span class="string">""</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">linearGradient</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">radiaGradient</span>&gt;</span><span class="tag">&lt;/<span class="name">radiaGradient</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">defs</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="模糊">模糊</h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">defs</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">filter</span> <span class="attr">id</span>=<span class="string">""</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">feGaussianBlur</span> <span class="attr">in</span>=<span class="string">"SourceGraphic"</span> <span class="attr">stdDeviation</span>=<span class="string">模糊程度</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">defs</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="拖拽">拖拽</h1>
+<h2 id="源元素事件">源元素事件</h2>
+<ul>
+<li>dragstart：当鼠标开始拖放时被触发</li>
+<li>drag：鼠标拖放过程</li>
+<li>dragend：鼠标结束拖放触发</li>
+</ul>
+<h2 id="目标元素事件">目标元素事件</h2>
+<ul>
+<li>dragenter：当鼠标拖放进入到目标元素内被触发</li>
+<li>dragover：当鼠标到达目标元素触发</li>
+<li>drop：当鼠标实现拖放效果时被触发，需为dragover事件增加event.preventDefault()</li>
+<li>dragleave：当鼠标离开目标元素时触发</li>
+</ul>
+<h2 id="datatransfer对象">dataTransfer对象</h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DataTransfer" target="_blank" rel="external">dataTransfer</a>：存储源元素信息</p>
+<ul>
+<li>setData(type, data)</li>
+<li>getData(type)</li>
+<li>clearData()</li>
+</ul>
+<hr>
+<h1 id="地理定位">地理定位</h1>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">geoFindMe</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">if</span> (!navigator.geolocation) &#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">"Your browser doesn't support Geolocarion"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">success</span>(<span class="params">position</span>) </span>&#123;</div><div class="line">		<span class="keyword">var</span> latitude = position.coords.latitude;</div><div class="line">		<span class="keyword">var</span> longitude = position.coords.longitude;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'latitude: '</span> + latitude + <span class="string">' ; longitude : '</span> + longitude);</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'error'</span>);</div><div class="line">	&#125;</div><div class="line">	navigator.geolocation.getCurrentPosition(success, error);</div><div class="line">&#125;</div><div class="line">geoFindMe();</div></pre></td></tr></table></figure>
+<p><a href="https://developers.google.com/maps/documentation/javascript/tutorial?hl=zh-cn" target="_blank" rel="external">调用Google Maps API</a>
+<a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="external">调用百度地图API</a></p>
+<hr>
+<h1 id="web-worker">Web Worker</h1>
+<ol>
+<li>创建Web Worker对象</li>
+<li>为该对象绑定onmessage事件。通过event事件对象的data属性可以获取postMessage()方法传递的数据</li>
+</ol>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> worker = <span class="literal">new</span> Worker(worker文件路径);</div><div class="line">worker.onmessage = function (event) &#123;</div><div class="line">	<span class="built_in">var</span> <span class="built_in">data</span> = event.<span class="built_in">data</span>;</div><div class="line">    <span class="params">...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// worker文件</span></div><div class="line"><span class="params">...</span></div><div class="line">postMessage(<span class="built_in">data</span>);</div><div class="line"><span class="params">...</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="web存储">Web存储</h1>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API" target="_blank" rel="external">使用 WEB Storage API</a></p>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/sessionStorage" target="_blank" rel="external">sessionStorage</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage" target="_blank" rel="external">localStorage</a></li>
+</ul>
 ]]></content>
       
         
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
         
@@ -691,9 +822,9 @@ arguments有一个<code>callee</code>属性，指向拥有这个arguments对象�
         
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> JS </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
         
