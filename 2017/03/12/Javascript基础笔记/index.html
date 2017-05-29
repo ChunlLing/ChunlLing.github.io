@@ -37,7 +37,7 @@ Javascript区分大小写。
 不能把关键字、保留字、true、false和null作为标识符
 
 ECMAScri">
-<meta property="og:updated_time" content="2017-05-14T03:31:47.709Z">
+<meta property="og:updated_time" content="2017-05-29T15:53:22.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础笔记">
 <meta name="twitter:description" content="学习资料来源：
@@ -447,15 +447,18 @@ flags：有以下3个标志</p>
 <li><code>arguments</code>：保存函数参数<br>
 arguments有一个<code>callee</code>属性，指向拥有这个arguments对象的函数。</li>
 </ul>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// 下面两种方式等价，但第二种更优，降低耦合度</div><div class="line">function <span class="built_in">factorial</span>(<span class="built_in">num</span>) &#123;</div><div class="line">  <span class="keyword">if</span> (<span class="built_in">num</span> &lt;= <span class="number">1</span>) &#123;</div><div class="line">    <span class="built_in">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">return</span> <span class="built_in">num</span> * <span class="built_in">factorial</span>(nume-<span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">function <span class="built_in">factorial</span>(<span class="built_in">num</span>) &#123;</div><div class="line">  <span class="keyword">if</span> (<span class="built_in">num</span> &lt;= <span class="number">1</span>) &#123;</div><div class="line">    <span class="built_in">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">return</span> <span class="built_in">num</span> * arguments.callee(nume-<span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// 下面两种方式均为递归且等价，但第二种更优，降低耦合度</div><div class="line">function <span class="built_in">factorial</span>(<span class="built_in">num</span>) &#123;</div><div class="line">  <span class="keyword">if</span> (<span class="built_in">num</span> &lt;= <span class="number">1</span>) &#123;</div><div class="line">    <span class="built_in">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">return</span> <span class="built_in">num</span> * <span class="built_in">factorial</span>(nume-<span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">function <span class="built_in">factorial</span>(<span class="built_in">num</span>) &#123;</div><div class="line">  <span class="keyword">if</span> (<span class="built_in">num</span> &lt;= <span class="number">1</span>) &#123;</div><div class="line">    <span class="built_in">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="built_in">return</span> <span class="built_in">num</span> * arguments.callee(nume-<span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li><code>this</code>：函数执行的环境对象</li>
-<li><code>caller</code>：保存调用当前函数的函数的引用</li>
+</ul>
+<p>函数属性和方法：</p>
+<ul>
 <li><code>length</code>：表示函数希望接收的命名参数的个数</li>
-<li><code>prototype</code></li>
-<li><code>apply</code></li>
-<li><code>call</code></li>
-<li><code>bind</code></li>
+<li><code>prototype</code>：指向一个对象，这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法</li>
+<li><code>caller</code>：保存调用当前函数的函数的引用，如果是在全局作用域中调用当前函数，它的值为null</li>
+<li><code>apply</code>：在特定的作用域调用函数，实际上等于设置函数体内this对象的值。该方法接收两个参数：一个使在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是array的实例，也可以是arguments对象</li>
+<li><code>call</code>：在特定的作用域调用函数，实际上等于设置函数体内this对象的值。该方法第一个参数与<code>apply</code>方法一致，其余参数必须逐个列举出来</li>
+<li><code>bind</code>：创建一个函数实例，其this值会绑定到传给bind()函数的值</li>
 </ul>
 <hr>
 <p>原始值是 <strong>不可更改</strong> 的；原始值得比较是 <strong>值</strong> 的比较。<br>
@@ -484,7 +487,7 @@ arguments有一个<code>callee</code>属性，指向拥有这个arguments对象�
         <p><span>本文标题:</span><a href="/2017/03/12/Javascript基础笔记/">JavaScript基础笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
         <p><span>发布时间:</span>2017年03月12日 - 01时04分</p>
-        <p><span>最后更新:</span>2017年05月14日 - 11时31分</p>
+        <p><span>最后更新:</span>2017年05月29日 - 23时53分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/12/Javascript基础笔记/" title="JavaScript基础笔记">http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/</a>
             <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/03/12/Javascript基础笔记/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
