@@ -3,42 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>LESS学习笔记 | (&gt;^ω^&lt;)喵</title>
+  <title>2048，设计思路，以及一点感想 | (&gt;^ω^&lt;)喵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：学而时习之不亦说乎
-其实是以前做的笔记不见了重新写~😤
-安装
-服务器端
-通过npm（包管理器）安装
-1$ npm install -g less
-客户端
-在页面中引用
-12&amp;lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;文件.less&quot; /&amp;gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;less">
+  <meta name="description" content="在网上看了别人的代码，写得挺浅显易懂的，自己整合了下思路，重新写了一个，目前还是普通版，后续有时间再改造下游戏模式 😊
+体验室传送门：2048
+代码仓库传送门：源码
+
+游戏逻辑
+设置按键事件监听，根据keyCode判断移动方向。（截取部分代码分析，【】内标记问题在代码段后解释）
+12345678910111213141516171819202122232425262728293031323334">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LESS学习笔记">
-<meta property="og:url" content="http://ChunlLing.github.io.com/2017/04/14/LESS学习笔记/index.html">
+<meta property="og:title" content="2048，设计思路，以及一点感想">
+<meta property="og:url" content="http://ChunlLing.github.io.com/2017/06/17/2048，设计思路，以及一点感想/index.html">
 <meta property="og:site_name" content="(>^ω^<)喵">
-<meta property="og:description" content="前言：学而时习之不亦说乎
-其实是以前做的笔记不见了重新写~😤
-安装
-服务器端
-通过npm（包管理器）安装
-1$ npm install -g less
-客户端
-在页面中引用
-12&amp;lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;文件.less&quot; /&amp;gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;less">
-<meta property="og:updated_time" content="2017-04-14T07:18:40.408Z">
+<meta property="og:description" content="在网上看了别人的代码，写得挺浅显易懂的，自己整合了下思路，重新写了一个，目前还是普通版，后续有时间再改造下游戏模式 😊
+体验室传送门：2048
+代码仓库传送门：源码
+
+游戏逻辑
+设置按键事件监听，根据keyCode判断移动方向。（截取部分代码分析，【】内标记问题在代码段后解释）
+12345678910111213141516171819202122232425262728293031323334">
+<meta property="og:updated_time" content="2017-06-17T15:24:46.165Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LESS学习笔记">
-<meta name="twitter:description" content="前言：学而时习之不亦说乎
-其实是以前做的笔记不见了重新写~😤
-安装
-服务器端
-通过npm（包管理器）安装
-1$ npm install -g less
-客户端
-在页面中引用
-12&amp;lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;文件.less&quot; /&amp;gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;less">
+<meta name="twitter:title" content="2048，设计思路，以及一点感想">
+<meta name="twitter:description" content="在网上看了别人的代码，写得挺浅显易懂的，自己整合了下思路，重新写了一个，目前还是普通版，后续有时间再改造下游戏模式 😊
+体验室传送门：2048
+代码仓库传送门：源码
+
+游戏逻辑
+设置按键事件监听，根据keyCode判断移动方向。（截取部分代码分析，【】内标记问题在代码段后解释）
+12345678910111213141516171819202122232425262728293031323334">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -234,11 +228,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-LESS学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2048，设计思路，以及一点感想" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/14/LESS学习笔记/" class="article-date">
-      <time datetime="2017-04-14T03:26:39.000Z" itemprop="datePublished">2017-04-14</time>
+      <a href="/2017/06/17/2048，设计思路，以及一点感想/" class="article-date">
+      <time datetime="2017-06-17T14:03:16.000Z" itemprop="datePublished">2017-06-17</time>
 </a>
     </div>
   
@@ -251,7 +245,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LESS学习笔记
+      2048，设计思路，以及一点感想
     </h1>
   
 
@@ -262,7 +256,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LESS/">LESS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -273,30 +267,40 @@
       
         
         
-          <p>前言：学而时习之不亦说乎<br>
-其实是以前做的笔记不见了重新写~😤</p>
-<h1 id="安装">安装</h1>
-<h2 id="服务器端">服务器端</h2>
-<p>通过npm（包管理器）安装</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> -g <span class="keyword">less</span></div></pre></td></tr></table></figure>
-<h2 id="客户端">客户端</h2>
-<p>在页面中引用</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet/less"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"文件.less"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"less.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>需要注意<code>&lt;link&gt;</code>的<code>rel</code>属性并且这个标签放在脚本文件之前，<a href="http://lesscss.org/?utm_source=caibaojian.com#download-options" target="_blank" rel="external"><code>less.js</code>下载</a></p>
-<h1 id="用法">用法</h1>
-<h2 id="变量">变量</h2>
-<p>变量定义： <code>@变量名 : 值;</code></p>
-<h2 id="混合">混合</h2>
-<p>将一系列属性从一个规则集引入到另一个规则集中。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.border</span> &#123;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#id</span> &#123;</div><div class="line">	.<span class="attribute">border</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="嵌套">嵌套</h2>
-<p>可以在一个选择器中嵌套子选择器的样式。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#parent</span> &#123;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">    <span class="selector-id">#child</span> &#123;</div><div class="line">    	<span class="attribute">color</span>: <span class="number">#123</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-tag">a</span> &#123;</div><div class="line">    	&amp;:hover &#123;</div><div class="line">        	<span class="attribute">color</span>: <span class="number">#123</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>注意，<code>&amp;</code>表示父选择器，上栗<code>&amp;:hover</code>等价于<code>a:hover</code></p>
-<h2 id="计算">计算</h2>
-<p>任何数值、颜色和变量都可以计算。</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@num:</span> <span class="number">10px</span></div><div class="line">#id &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="variable">@num</span> * <span class="number">10</span>;</div><div class="line">    <span class="attribute">height</span>: calc(<span class="variable">@num</span> + <span class="number">5px</span>);		<span class="comment">// calc()是css3中的属性，用于计算</span></div><div class="line">    <span class="attribute">padding</span>: <span class="string">~'calc(@num - 5px)'</span>	<span class="comment">// 不会在编译后的css文件中显示计算结果</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="函数">函数</h2>
+          <p>在网上看了别人的代码，写得挺浅显易懂的，自己整合了下思路，重新写了一个，目前还是普通版，后续有时间再改造下游戏模式 😊<br>
+体验室传送门：<a href="https://chunlling.github.io/2048/" target="_blank" rel="external">2048</a><br>
+代码仓库传送门：<a href="https://github.com/ChunlLing/2048" target="_blank" rel="external">源码</a></p>
+<hr>
+<h1 id="游戏逻辑">游戏逻辑</h1>
+<p>设置按键事件监听，根据<code>keyCode</code>判断移动方向。（截取部分代码分析，【】内标记问题在代码段后解释）</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">move: function (direct) &#123;	<span class="comment">// direct为移动方向，1：左；2：右；3：上；4：下</span></div><div class="line">	<span class="keyword">this</span>.direct = direct;	</div><div class="line">	<span class="keyword">var</span> oldData, newData;	<span class="comment">// oldData, newData分别保存移动前和移动后的数据信息</span></div><div class="line">	oldData = <span class="keyword">this</span>.<span class="keyword">data</span>.toString();</div><div class="line">	switch (<span class="keyword">this</span>.direct) &#123;</div><div class="line">		case <span class="number">1</span>:				<span class="comment">// 按下左方向键</span></div><div class="line">			<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.rowNum; i++) &#123;	<span class="comment">// 遍历各行【问题1】</span></div><div class="line">				<span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="keyword">this</span>.colNum<span class="number">-1</span>; j++) &#123;	<span class="comment">// 遍历除最后一列的所有列【问题2】</span></div><div class="line">					<span class="keyword">var</span> nextNotNull = <span class="keyword">this</span>.getNextNum(i, j);	<span class="comment">// 获得当前被访问元素后不为0的数的列下标，该数不存在时返回-1【问题3】</span></div><div class="line">					<span class="keyword">if</span> (nextNotNull == <span class="number">-1</span>) &#123;	<span class="comment">// 该数不存在，跳出循环【问题4】</span></div><div class="line">						<span class="keyword">break</span>;</div><div class="line">					&#125; <span class="keyword">else</span> &#123;	<span class="comment">// 该数存在</span></div><div class="line">						<span class="keyword">if</span> (<span class="keyword">this</span>.<span class="keyword">data</span>[i][j] == <span class="number">0</span>) &#123;	<span class="comment">// 如果当前被访问元素的值为0</span></div><div class="line">							<span class="keyword">this</span>.<span class="keyword">data</span>[i][j] = <span class="keyword">this</span>.<span class="keyword">data</span>[i][nextNotNull];	<span class="comment">// 将当前被访问元素后不为0的数赋给当前被访问元素</span></div><div class="line">							<span class="keyword">this</span>.<span class="keyword">data</span>[i][nextNotNull] = <span class="number">0</span>;	<span class="comment">// 清除当前被访问元素后不为0的数</span></div><div class="line">							j--;	<span class="comment">// 【问题5】</span></div><div class="line">						&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.<span class="keyword">data</span>[i][nextNotNull] == <span class="keyword">this</span>.<span class="keyword">data</span>[i][j]) &#123;</div><div class="line">							<span class="keyword">this</span>.changeData(i,j,nextNotNull);	<span class="comment">// 【问题6】</span></div><div class="line">						&#125;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		case <span class="number">2</span>:</div><div class="line">           	<span class="comment">// 代码省略，与1的区别在于在第二轮循环内，获得当前被访问元素后不为0的数的列下标从当前被访问元素开始向前搜索</span></div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		case <span class="number">3</span>:</div><div class="line">           	<span class="comment">// 代码省略，与1的区别在于在第一轮循环为列，第二轮为行</span></div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		case <span class="number">4</span>:</div><div class="line">           	<span class="comment">// 代码省略，与3的区别在于在第二轮循环内，获得当前被访问元素后不为0的数的行下标从当前被访问元素开始向前搜索</span></div><div class="line">			<span class="keyword">break</span>;</div><div class="line">	&#125;</div><div class="line">	newData = <span class="keyword">this</span>.<span class="keyword">data</span>.toString();</div><div class="line">	<span class="keyword">if</span> (newData != oldData) &#123;	<span class="comment">// 判断当前方向的所有方块是否可移动</span></div><div class="line">		<span class="keyword">this</span>.randomNum();	<span class="comment">// 随机产生一个新的方块</span></div><div class="line">		<span class="keyword">this</span>.updateView();	<span class="comment">// 更新视图【问题6】</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>【问题1】</p>
+<ul>
+<li>A: 水平方向（按下左右键）先遍历行再遍历列，垂直方向（按下上下方向键）先遍历列再遍历行。对水平方向的移动而言，列与列之间的数据相互影响，而不同行的列数据不影响</li>
+</ul>
+<p>【问题2】为什么不遍历所有列？</p>
+<ul>
+<li>A: 可以选择遍历所有列，但不都进行遍历更好。在后面的步骤中有求当前遍历元素后不为0的数的下标的算法，该算法能访问到最后一个元素。</li>
+</ul>
+<p>【问题3】getNextNum()方法？</p>
+<ul>
+<li>A: 返回当前被访问元素后不为0的数的列下标，若无满足条件的数返回-1.</li>
+</ul>
+<p>【问题4】能否省略nextNotNull == -1的判断</p>
+<ul>
+<li>A: 可以。在for循环中break的作用是跳出循环，若该判断为真，可知当前遍历元素不会和后面的数字进行计算，因而直接跳出循环效果更好。</li>
+</ul>
+<p>【问题5】j–？</p>
+<ul>
+<li>A: 若能进行到此步，说明该位置原先的数值为0，现被后面第一个不为0的数取代，即该位置上的数并没有与后面的数计算过，因而需要重新访问此位置。</li>
+</ul>
+<p>【问题6】changeData()方法？</p>
+<ul>
+<li>A: 若能进行到此步，说明该位置原先的数值与后面第一个不为0的数值相等，即该数被计算了一次。</li>
+</ul>
+<hr>
+<h1 id="游戏设计">游戏设计</h1>
+<p>明天再更咯~ 😴</p>
 
         
       
@@ -306,13 +310,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/14/LESS学习笔记/">LESS学习笔记</a></p>
+        <p><span>本文标题:</span><a href="/2017/06/17/2048，设计思路，以及一点感想/">2048，设计思路，以及一点感想</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ChunLing 的个人博客">ChunLing</a></p>
-        <p><span>发布时间:</span>2017年04月14日 - 11时26分</p>
-        <p><span>最后更新:</span>2017年04月14日 - 15时18分</p>
+        <p><span>发布时间:</span>2017年06月17日 - 22时03分</p>
+        <p><span>最后更新:</span>2017年06月17日 - 23时24分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/14/LESS学习笔记/" title="LESS学习笔记">http://ChunlLing.github.io.com/2017/04/14/LESS学习笔记/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/04/14/LESS学习笔记/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/06/17/2048，设计思路，以及一点感想/" title="2048，设计思路，以及一点感想">http://ChunlLing.github.io.com/2017/06/17/2048，设计思路，以及一点感想/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://ChunlLing.github.io.com/2017/06/17/2048，设计思路，以及一点感想/　　作者: ChunLing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -325,18 +329,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/05/27/HTML5学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          HTML5学习笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/29/js字符串截取/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js字符串截取</div>
+    <a href="/2017/05/27/HTML5学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTML5学习笔记</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -347,7 +342,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器端"><span class="toc-number">1.1.</span> <span class="toc-text">服务器端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#客户端"><span class="toc-number">1.2.</span> <span class="toc-text">客户端</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用法"><span class="toc-number">2.</span> <span class="toc-text">用法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">2.1.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#混合"><span class="toc-number">2.2.</span> <span class="toc-text">混合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#嵌套"><span class="toc-number">2.3.</span> <span class="toc-text">嵌套</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算"><span class="toc-number">2.4.</span> <span class="toc-text">计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数"><span class="toc-number">2.5.</span> <span class="toc-text">函数</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#游戏逻辑"><span class="toc-number">1.</span> <span class="toc-text">游戏逻辑</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#游戏设计"><span class="toc-number">2.</span> <span class="toc-text">游戏设计</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -386,13 +381,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/05/27/HTML5学习笔记/" title="上一篇: HTML5学习笔记">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/03/29/js字符串截取/" title="下一篇: js字符串截取">
+            <a href="/2017/05/27/HTML5学习笔记/" title="下一篇: HTML5学习笔记">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title><![CDATA[2048，设计思路，以及一点感想]]></title>
+      <url>http://ChunlLing.github.io.com/2017/06/17/2048%EF%BC%8C%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%B8%80%E7%82%B9%E6%84%9F%E6%83%B3/</url>
+      <content type="html"><![CDATA[<p>在网上看了别人的代码，写得挺浅显易懂的，自己整合了下思路，重新写了一个，目前还是普通版，后续有时间再改造下游戏模式 😊<br>
+体验室传送门：<a href="https://chunlling.github.io/2048/" target="_blank" rel="external">2048</a><br>
+代码仓库传送门：<a href="https://github.com/ChunlLing/2048" target="_blank" rel="external">源码</a></p>
+<hr>
+<h1 id="游戏逻辑">游戏逻辑</h1>
+<p>设置按键事件监听，根据<code>keyCode</code>判断移动方向。（截取部分代码分析，【】内标记问题在代码段后解释）</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">move: function (direct) &#123;	<span class="comment">// direct为移动方向，1：左；2：右；3：上；4：下</span></div><div class="line">	<span class="keyword">this</span>.direct = direct;	</div><div class="line">	<span class="keyword">var</span> oldData, newData;	<span class="comment">// oldData, newData分别保存移动前和移动后的数据信息</span></div><div class="line">	oldData = <span class="keyword">this</span>.<span class="keyword">data</span>.toString();</div><div class="line">	switch (<span class="keyword">this</span>.direct) &#123;</div><div class="line">		case <span class="number">1</span>:				<span class="comment">// 按下左方向键</span></div><div class="line">			<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.rowNum; i++) &#123;	<span class="comment">// 遍历各行【问题1】</span></div><div class="line">				<span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="keyword">this</span>.colNum<span class="number">-1</span>; j++) &#123;	<span class="comment">// 遍历除最后一列的所有列【问题2】</span></div><div class="line">					<span class="keyword">var</span> nextNotNull = <span class="keyword">this</span>.getNextNum(i, j);	<span class="comment">// 获得当前被访问元素后不为0的数的列下标，该数不存在时返回-1【问题3】</span></div><div class="line">					<span class="keyword">if</span> (nextNotNull == <span class="number">-1</span>) &#123;	<span class="comment">// 该数不存在，跳出循环【问题4】</span></div><div class="line">						<span class="keyword">break</span>;</div><div class="line">					&#125; <span class="keyword">else</span> &#123;	<span class="comment">// 该数存在</span></div><div class="line">						<span class="keyword">if</span> (<span class="keyword">this</span>.<span class="keyword">data</span>[i][j] == <span class="number">0</span>) &#123;	<span class="comment">// 如果当前被访问元素的值为0</span></div><div class="line">							<span class="keyword">this</span>.<span class="keyword">data</span>[i][j] = <span class="keyword">this</span>.<span class="keyword">data</span>[i][nextNotNull];	<span class="comment">// 将当前被访问元素后不为0的数赋给当前被访问元素</span></div><div class="line">							<span class="keyword">this</span>.<span class="keyword">data</span>[i][nextNotNull] = <span class="number">0</span>;	<span class="comment">// 清除当前被访问元素后不为0的数</span></div><div class="line">							j--;	<span class="comment">// 【问题5】</span></div><div class="line">						&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.<span class="keyword">data</span>[i][nextNotNull] == <span class="keyword">this</span>.<span class="keyword">data</span>[i][j]) &#123;</div><div class="line">							<span class="keyword">this</span>.changeData(i,j,nextNotNull);	<span class="comment">// 【问题6】</span></div><div class="line">						&#125;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		case <span class="number">2</span>:</div><div class="line">           	<span class="comment">// 代码省略，与1的区别在于在第二轮循环内，获得当前被访问元素后不为0的数的列下标从当前被访问元素开始向前搜索</span></div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		case <span class="number">3</span>:</div><div class="line">           	<span class="comment">// 代码省略，与1的区别在于在第一轮循环为列，第二轮为行</span></div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		case <span class="number">4</span>:</div><div class="line">           	<span class="comment">// 代码省略，与3的区别在于在第二轮循环内，获得当前被访问元素后不为0的数的行下标从当前被访问元素开始向前搜索</span></div><div class="line">			<span class="keyword">break</span>;</div><div class="line">	&#125;</div><div class="line">	newData = <span class="keyword">this</span>.<span class="keyword">data</span>.toString();</div><div class="line">	<span class="keyword">if</span> (newData != oldData) &#123;	<span class="comment">// 判断当前方向的所有方块是否可移动</span></div><div class="line">		<span class="keyword">this</span>.randomNum();	<span class="comment">// 随机产生一个新的方块</span></div><div class="line">		<span class="keyword">this</span>.updateView();	<span class="comment">// 更新视图【问题6】</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>【问题1】</p>
+<ul>
+<li>A: 水平方向（按下左右键）先遍历行再遍历列，垂直方向（按下上下方向键）先遍历列再遍历行。对水平方向的移动而言，列与列之间的数据相互影响，而不同行的列数据不影响</li>
+</ul>
+<p>【问题2】为什么不遍历所有列？</p>
+<ul>
+<li>A: 可以选择遍历所有列，但不都进行遍历更好。在后面的步骤中有求当前遍历元素后不为0的数的下标的算法，该算法能访问到最后一个元素。</li>
+</ul>
+<p>【问题3】getNextNum()方法？</p>
+<ul>
+<li>A: 返回当前被访问元素后不为0的数的列下标，若无满足条件的数返回-1.</li>
+</ul>
+<p>【问题4】能否省略nextNotNull == -1的判断</p>
+<ul>
+<li>A: 可以。在for循环中break的作用是跳出循环，若该判断为真，可知当前遍历元素不会和后面的数字进行计算，因而直接跳出循环效果更好。</li>
+</ul>
+<p>【问题5】j–？</p>
+<ul>
+<li>A: 若能进行到此步，说明该位置原先的数值为0，现被后面第一个不为0的数取代，即该位置上的数并没有与后面的数计算过，因而需要重新访问此位置。</li>
+</ul>
+<p>【问题6】changeData()方法？</p>
+<ul>
+<li>A: 若能进行到此步，说明该位置原先的数值与后面第一个不为0的数值相等，即该数被计算了一次。</li>
+</ul>
+<hr>
+<h1 id="游戏设计">游戏设计</h1>
+<p>明天再更咯~ 😴</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> HTML </tag>
+            
+            <tag> JS </tag>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[HTML5学习笔记]]></title>
       <url>http://ChunlLing.github.io.com/2017/05/27/HTML5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<h1 id="新元素">新元素</h1>
