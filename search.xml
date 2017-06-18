@@ -39,15 +39,41 @@
 </ul>
 <hr>
 <h1 id="游戏设计">游戏设计</h1>
-<p>明天再更咯~ 😴</p>
+<p>定义一个<code>game</code>对象。
+其属性有：</p>
+<ul>
+<li>data：数组类型。保存棋盘上方块数值，如<code>data[i][j]</code>表示棋盘第i-1行j-1列上的方块数值。</li>
+<li>rowNum、colNum：数值类型。棋盘的规格，默认为4*4棋盘。</li>
+<li>direct：数值类型。记录按键方向。1为向左，2为向右，3为向上，4位向下。</li>
+<li>score：数值类型。记录当前得分。</li>
+<li>RUNNING、GAMEOVER：布尔类型。</li>
+<li>state：游戏状态。状态为RUNNING表示游戏正在进行，GAMEOVER表示游戏结束。</li>
+</ul>
+<p>其方法有：</p>
+<ul>
+<li>isFull()：判断棋盘上是否所有位置都被填满。返回值为布尔类型，若是返回true。</li>
+<li>isGameOver()：判断棋盘是否无可移动的方块或已经出现数值2048。返回值为布尔类型，若是返回true；</li>
+<li>start()：开始游戏，清空棋盘原有数据，分数清零，然后随机产生两个方块。</li>
+<li>randomNum()：产生随机方块。</li>
+<li>updateView()：更新视图并判断游戏是否达到结束条件。</li>
+<li>changeData(i, j, next)：根据方块的移动组合条件改变方块数值和游戏分数。</li>
+<li>getNextNum(rowIndex, colIndex)：返回当前被访问元素后不为0的数的列下标，若无满足条件的数返回-1。</li>
+<li>move(direct)：根据参数direct确定移动方向，具体步骤见<code>游戏逻辑</code>一节。</li>
+</ul>
+<hr>
+<h1 id="一点感想">一点感想</h1>
+<p>看得多不如自己动手敲。看过去的知识会觉得很简单，因为难的已经自动被过滤掉了😕<br>
+而在真的动手coding时才会深切体会该是什么逻辑该用什么方法。突然想起一个词：唯手熟尔<br>
+还有就是不要急着去动手写代码，先大致清楚了需要实现什么功能有个大体的框架再一点一点去细化，慢慢完善。<br>
+以及，想到再说吧😯</p>
 ]]></content>
       
         
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> JS </tag>
+            
+            <tag> HTML </tag>
             
             <tag> CSS </tag>
             
@@ -877,9 +903,9 @@ arguments有一个<code>callee</code>属性，指向拥有这个arguments对象�
         
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> JS </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
         
