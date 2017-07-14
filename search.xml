@@ -4,6 +4,57 @@
   
     
     <entry>
+      <title><![CDATA[AJAX学习笔记]]></title>
+      <url>http://ChunlLing.github.io.com/2017/07/14/AJAX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>:simple_smile:一点其他的话<br>
+同步交互与异步交互的区别<br>
+同步交互：客户端向服务器发送请求到服务器进行响应的过程用户不能做其他事情，响应的是完整的HTML页面，执行速度相对较慢。<br>
+异步交互：客户端向服务器发送请求到服务器进行响应的过程用户可以做其他事情；响应的是部分数据，执行速度相对较快。</p>
+<h1 id="ajax核心对象xmlhttprequest">Ajax核心对象–XMLHttpRequest</h1>
+<h2 id="创建xmlhttprequest对象">创建XMLHttpRequest对象</h2>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getXHR</span></span>() &#123;</div><div class="line">	<span class="keyword">var</span> xhr = <span class="literal">null</span>;</div><div class="line">	<span class="keyword">if</span> (window.XMLHttpRequest) &#123;</div><div class="line">		xhr = <span class="keyword">new</span> <span class="type">XMLHttpRequest</span>();</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		xhr = <span class="keyword">new</span> <span class="type">ActiveXObject</span>(<span class="string">'Microsoft.XMLHttp'</span>);</div><div class="line">	&#125;</div><div class="line">	retrun xhr;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 以上是为兼容ie6及更低版本，以后不需要了。https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started</span></div></pre></td></tr></table></figure>
+<h2 id="xmlhttprequest对象的属性-方法和事件">XMLHttpRequest对象的属性、方法和事件</h2>
+<h3 id="属性">属性</h3>
+<ul>
+<li>readyState：判断服务器端的当前状态（0-4）</li>
+<li>status：判断服务器端的状态码（200表示成功）</li>
+<li>responseText：接收服务器响应文本数据</li>
+<li>responseXML：接收服务器响应XML数据</li>
+</ul>
+<h3 id="方法">方法</h3>
+<ul>
+<li>open(method,url)<br>
+如果method为<code>get</code>，请求参数以<code>?key1=value1&amp;key2=value2</code>的形式加在url后。</li>
+<li>send()<br>
+如果method为<code>get</code>，此方法参数为<code>null</code>；<br>
+如果method为<code>post</code>，此方法参数为请求参数，并且在调用此方法前需设置：xhr.setRequestHeader(“Content-Type”,“application/x-www-form-urlencoded”);</li>
+</ul>
+<h3 id="事件">事件</h3>
+<p>onreadystatechange：监听服务器状态的改变</p>
+<hr>
+<h1 id="jquery中的ajax">JQuery中的Ajax</h1>
+<ul>
+<li>$.ajax()</li>
+<li>.load()</li>
+<li>$.get()</li>
+<li>$.post()</li>
+<li>$.getScript()</li>
+<li>$.getJSON()</li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> JS </tag>
+            
+            <tag> AJAX </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2048，设计思路，以及一点感想]]></title>
       <url>http://ChunlLing.github.io.com/2017/06/17/2048%EF%BC%8C%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%B8%80%E7%82%B9%E6%84%9F%E6%83%B3/</url>
       <content type="html"><![CDATA[<p>在网上看了别人的代码，写得挺浅显易懂的，自己整合了下思路，重新写了一个，目前还是普通版，后续有时间再改造下游戏模式 😊<br>
@@ -564,7 +615,7 @@
 <p>split()方法创建并返回一个数组，内容为至多limit个给定的字符串string的子串。子串创建的方式：从string()的开头搜索到结尾，在所有匹配delimiter的文本的前后方断开。分割文本不包含在返回的子串中。但当delimiter为带圆括号的正则表达式时可返回匹配圆括号内的子串（@.@见快捷测试）</p>
 <hr>
 <p>快捷测试</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1 = <span class="string">'abcdef'</span>;</div><div class="line"><span class="built_in">console</span>.log(str1);</div><div class="line"><span class="built_in">console</span>.log(str1.substring(<span class="number">0</span>, <span class="number">3</span>));</div><div class="line"><span class="built_in">console</span>.log(str1);</div><div class="line"></div><div class="line"><span class="keyword">var</span> str2 = <span class="string">'abcdef'</span>;</div><div class="line"><span class="built_in">console</span>.log(str2);</div><div class="line"><span class="built_in">console</span>.log(str2.sclice(<span class="number">0</span>, <span class="number">3</span>));</div><div class="line"><span class="built_in">console</span>.log(str2);</div><div class="line"><span class="built_in">console</span>.log(str2.sclice(<span class="number">4</span>, <span class="number">-3</span>));</div><div class="line"></div><div class="line"><span class="keyword">var</span> str3 = <span class="string">'hello world'</span>;</div><div class="line"><span class="built_in">console</span>.log(str3);</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="string">' '</span>));</div><div class="line"><span class="built_in">console</span>.log(str3);</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="regexp">/hello/</span>));</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="regexp">/(hello)/</span>));</div><div class="line"></div><div class="line"><span class="keyword">var</span> str4 = <span class="string">'hello &lt;b&gt;world&lt;/b&gt;'</span>;</div><div class="line"><span class="built_in">console</span>.log(str4.split(<span class="regexp">/&lt;[^&gt;]*&gt;/</span>));</div><div class="line"></div><div class="line"><span class="keyword">var</span> str5 = <span class="string">'hello hello &lt;b&gt;world&lt;/b&gt;'</span>;</div><div class="line"><span class="built_in">console</span>.log(str5.split(<span class="regexp">/(&lt;[^&gt;]*&gt;)/</span>));</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1 = <span class="string">'abcdef'</span>;</div><div class="line"><span class="built_in">console</span>.log(str1);</div><div class="line"><span class="built_in">console</span>.log(str1.substring(<span class="number">0</span>, <span class="number">3</span>));</div><div class="line"><span class="built_in">console</span>.log(str1);</div><div class="line"></div><div class="line"><span class="keyword">var</span> str2 = <span class="string">'abcdef'</span>;</div><div class="line"><span class="built_in">console</span>.log(str2);</div><div class="line"><span class="built_in">console</span>.log(str2.slice(<span class="number">0</span>, <span class="number">3</span>));</div><div class="line"><span class="built_in">console</span>.log(str2);</div><div class="line"><span class="built_in">console</span>.log(str2.slice(<span class="number">4</span>, <span class="number">-3</span>));</div><div class="line"></div><div class="line"><span class="keyword">var</span> str3 = <span class="string">'hello world'</span>;</div><div class="line"><span class="built_in">console</span>.log(str3);</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="string">' '</span>));</div><div class="line"><span class="built_in">console</span>.log(str3);</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="regexp">/hello/</span>));</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="regexp">/(hello)/</span>));</div><div class="line"></div><div class="line"><span class="keyword">var</span> str4 = <span class="string">'hello &lt;b&gt;world&lt;/b&gt;'</span>;</div><div class="line"><span class="built_in">console</span>.log(str4.split(<span class="regexp">/&lt;[^&gt;]*&gt;/</span>));</div><div class="line"></div><div class="line"><span class="keyword">var</span> str5 = <span class="string">'hello hello &lt;b&gt;world&lt;/b&gt;'</span>;</div><div class="line"><span class="built_in">console</span>.log(str5.split(<span class="regexp">/(&lt;[^&gt;]*&gt;)/</span>));</div></pre></td></tr></table></figure>
 ]]></content>
       
         
